@@ -53,7 +53,7 @@ const Technologies = () => {
             </motion.h2>
             <div className="flex flex-wrap items-center justify-center gap-5">
                 <motion.div
-                    variants={iconVariants(2.5)}
+                    variants={iconVariants(9)}
                     initial="initial"
                     animate="animate"
                     whileInView="visible"
@@ -75,7 +75,7 @@ const Technologies = () => {
                     <RiJavascriptFill className="text-7xl text-yellow-400" />
                 </motion.div>
                 <motion.div
-                    variants={iconVariants(7.5)}
+                    variants={iconVariants(3.5)}
                     initial="initial"
                     animate="animate"
                     whileInView="visible"
@@ -86,7 +86,7 @@ const Technologies = () => {
                     <FaPython className="text-7xl text-yellow-500" />
                 </motion.div>
                 <motion.div
-                    variants={iconVariants(4)}
+                    variants={iconVariants(6.5)}
                     initial="initial"
                     animate="animate"
                     whileInView="visible"
