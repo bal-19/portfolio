@@ -4,9 +4,9 @@ import { ABOUT_TEXT } from "../constants";
 
 const container = (position_x, position_y, delay) => ({
     hidden: {
+        opacity: 0,
         x: position_x,
         y: position_y,
-        opacity: 0,
     },
     visible: {
         x: 0,

@@ -10,6 +10,18 @@ const iconVariants = (duration) => ({
         x: -20,
         opacity: 0,
     },
+    hover: {
+        scale: 1.2,
+        transition: {
+            duration: 0.4,
+        },
+    },
+    tap: {
+        scale: 1.1,
+        transition: {
+            duration: 0.4,
+        },
+    },
     animate: {
         y: [10, -10],
         transition: {
@@ -39,12 +51,14 @@ const Technologies = () => {
             >
                 Technologies
             </motion.h2>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-5">
                 <motion.div
                     variants={iconVariants(2.5)}
                     initial="initial"
                     animate="animate"
                     whileInView="visible"
+                    whileHover="hover"
+                    whileTap="tap"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
                     <FaHtml5 className="text-7xl text-orange-600" />
@@ -54,24 +68,30 @@ const Technologies = () => {
                     initial="initial"
                     animate="animate"
                     whileInView="visible"
+                    whileHover="hover"
+                    whileTap="tap"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
                     <RiJavascriptFill className="text-7xl text-yellow-400" />
                 </motion.div>
                 <motion.div
-                    variants={iconVariants(6)}
+                    variants={iconVariants(7.5)}
                     initial="initial"
                     animate="animate"
                     whileInView="visible"
+                    whileHover="hover"
+                    whileTap="tap"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
-                    <FaPython className="text-7xl text-white" />
+                    <FaPython className="text-7xl text-yellow-500" />
                 </motion.div>
                 <motion.div
                     variants={iconVariants(4)}
                     initial="initial"
                     animate="animate"
                     whileInView="visible"
+                    whileHover="hover"
+                    whileTap="tap"
                     className="rounded-2xl border-4 border-neutral-800 p-4"
                 >
                     <SiPhp className="text-7xl text-indigo-900" />

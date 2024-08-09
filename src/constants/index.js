@@ -1,9 +1,12 @@
 import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
+import school1 from "../assets/educations/school-1.jpg";
+import school2 from "../assets/educations/school-2.jpg";
+import school3 from "../assets/educations/school-3.jpg";
 
-export const HERO_CONTENT = `As a beginner developer, I have a solid foundational understanding of several key programming languages, including Python, PHP, JavaScript, and Node.js. My experience with Python and PHP has equipped me with the skills to develop functional web applications and scripts, while my knowledge of JavaScript and Node.js enables me to effectively handle both front-end and back-end aspects of application development. With this combination of skills, I strive to continually enhance my technical abilities, deepen my understanding of best practices in software development, and explore various new technologies. My goal is to become a skilled and reliable developer, capable of tackling technical challenges with innovative and efficient solutions.`;
+export const HERO_CONTENT = `HI, Welcome to my Portfolio, I am a beginner developer. Hope you enjoy my portfolio :D`;
 
-export const ABOUT_TEXT = `My name is Iqbal Haidee, and I am a beginner developer eager to grow in the field of web development. Currently, I have a foundational understanding of Python, PHP, and JavaScript, and I am committed to deepening my skills in these areas. With a strong desire to learn and improve, I am dedicated to advancing my capabilities and seizing new opportunities in the world of web development.`;
+export const ABOUT_TEXT = `Hellow, my name is Iqbal Haidee, and I am a beginner developer eager to grow in the field of web development. Currently, I have a foundational understanding of Python, PHP, and JavaScript, and I am committed to deepening my skills in these areas. With a strong desire to learn and improve, I am dedicated to advancing my capabilities and seizing new opportunities in the world of web development.`;
 
 export const EXPERIENCES = [
     {
@@ -32,9 +35,36 @@ export const PROJECTS = [
     },
 ];
 
+export const EDUCATION = [
+    {
+        name: "MI Bustanul Ulum",
+        image: school1,
+        level: "Sekolah Dasar",
+        date: "2013 - 2019",
+        address:
+            "Jl. Cempaka No.25, Pesanggrahan, Kec. Batu, Kota Batu, Jawa Timur 65313",
+    },
+    {
+        name: "MTs Negeri Batu",
+        image: school2,
+        level: "Sekolah Menengah Pertama",
+        date: "2019 - 2022",
+        address:
+            "Jl. Pronoyudo, Dadaprejo, Kec. Junrejo, Kota Batu, Jawa Timur 65233",
+    },
+    {
+        name: "SMK PGRI 03 Malang",
+        image: school3,
+        level: "Sekolah Menengah Kejuruan",
+        date: "2022 - present",
+        address:
+            "Jl. Raya Tlogomas Gg. 9 No.29, Tlogomas, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144",
+    },
+];
+
 export const CONTACT = {
     address:
-        "Jl. Kamboja Atas, Pesanggrahan, Kec. Batu, Kota Batu, Jawa Timur, Indonesia 65313",
+        "Jl. Kamboja Atas, Pesanggrahan, Kec. Batu, Kota Batu, Jawa Timur 65313",
     phoneNo: "+62 878 5675 4195",
     email: "iqbalhaidee19@gmail.com",
 };

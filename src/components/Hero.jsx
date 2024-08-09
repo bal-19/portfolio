@@ -1,5 +1,5 @@
-import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 const container = (position_x, position_y, delay) => ({
     hidden: {
@@ -32,33 +32,38 @@ const Hero = () => {
                         >
                             Iqbal Haidee
                         </motion.h1>
-                        <motion.span
+                        <motion.div
                             variants={container(-100, 0, 0.4)}
                             initial="hidden"
                             animate="visible"
-                            className="bg-gradient-to-r from-blue-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
                         >
-                            Beginner Developer
-                        </motion.span>
-                        <motion.p
-                            variants={container(-100, 0, 0.8)}
-                            initial="hidden"
-                            animate="visible"
-                            className="my-2 max-w-xl py-6 font-light tracking-tighter"
-                        >
-                            {HERO_CONTENT}
-                        </motion.p>
+                            <TypeAnimation
+                                sequence={[
+                                    800,
+                                    "Hi!, Welcome to my Portfolio",
+                                    800,
+                                    "I am a beginner developer",
+                                    800,
+                                    "Hope you enjoy my portfolio :D",
+                                    800,
+                                    "Have a nice day!",
+                                ]}
+                                cursor={true}
+                                repeat={Infinity}
+                                className="bg-gradient-to-r from-blue-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
+                            />
+                        </motion.div>
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8">
                     <div className="flex justify-center">
                         <motion.img
-                            variants={container(100, 0, 1.2)}
+                            variants={container(100, 0, 0.4)}
                             initial="hidden"
                             animate="visible"
                             src="https://avatars.githubusercontent.com/u/152265152?v=4"
                             alt="Iqbal Haidee"
-                            className="rounded-2xl shadow-lg"
+                            className="rounded-full shadow-lg"
                         />
                     </div>
                 </div>

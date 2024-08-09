@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -23,6 +24,7 @@ const App = () => {
                 <Technologies />
                 <Experience />
                 <Projects />
+                <Education />
                 <Contact />
             </div>
         </div>
