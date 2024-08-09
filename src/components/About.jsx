@@ -29,7 +29,7 @@ const About = () => {
                 <div className="w-full lg:w-1/2 lg:p-8">
                     <div className="flex items-center justify-center">
                         <motion.img
-                            variants={container(-100, 0, 0)}
+                            variants={container(-80, 0, 0)}
                             initial="hidden"
                             whileInView="visible"
                             className="rounded-2xl"
@@ -41,7 +41,7 @@ const About = () => {
                 <div className="w-full lg:w-1/2">
                     <div className="flex justify-center lg:justify-start">
                         <motion.p
-                            variants={container(100, 0, 0)}
+                            variants={container(80, 0, 0)}
                             initial="hidden"
                             whileInView="visible"
                             className="my-2 max-w-xl py-6"
