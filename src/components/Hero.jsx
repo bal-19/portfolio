@@ -50,7 +50,7 @@ const Hero = () => {
                                 ]}
                                 cursor={true}
                                 repeat={Infinity}
-                                className="bg-gradient-to-r from-blue-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
+                                className="my-3 bg-gradient-to-r from-blue-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
                             />
                         </motion.div>
                     </div>
