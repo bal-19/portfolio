@@ -36,6 +36,7 @@ const Hero = () => {
                             variants={container(-100, 0, 0.4)}
                             initial="hidden"
                             animate="visible"
+                            className="my-3"
                         >
                             <TypeAnimation
                                 sequence={[
@@ -50,7 +51,7 @@ const Hero = () => {
                                 ]}
                                 cursor={true}
                                 repeat={Infinity}
-                                className="my-3 bg-gradient-to-r from-blue-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
+                                className="bg-gradient-to-r from-blue-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
                             />
                         </motion.div>
                     </div>
