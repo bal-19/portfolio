@@ -7,7 +7,7 @@ const projects = [
         title: "Website for Top Up Diamonds Mobile Legends",
         description:
             "A sleek and responsive platform designed for Mobile Legends players to easily purchase in-game currency. Built with a modern tech stack, it features a user-friendly interface and seamless navigation (note: payment integration is not included).",
-        image: "/projects/project1.png",
+        image: "/projects/project1.jpeg",
         tags: ["PHP", "Bootstrap", "MySQL"],
         githubUrl: "https://github.com/bal-19/topup-website-mobile-legends",
     },
@@ -16,7 +16,7 @@ const projects = [
         title: "Online Wifi Installation Orders",
         description:
             "A dynamic web application that streamlines the process of ordering WiFi installations online. Includes an interactive dashboard with secure payment using Midtrans and advanced filtering for enhanced user experience.",
-        image: "/projects/project2.png",
+        image: "/projects/project2.jpeg",
         tags: ["Laravel", "TailwindCSS", "Midtrans"],
         githubUrl: "https://github.com/bal-19/hadi-net",
     },
