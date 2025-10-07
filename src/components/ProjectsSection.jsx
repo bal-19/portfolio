@@ -57,7 +57,7 @@ export const ProjectsSection = () => {
                             threshold={0.3}
                             initialOpacity={0}
                         >
-                            <div className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover h-full min-h-[420px] flex flex-col">
+                            <div className="group bg-background/50 border-2 border-transparent bg-clip-padding rounded-xl shadow-lg p-8 flex flex-col justify-between backdrop-blur-md hover:border-primary transition-all duration-300 h-full min-h-[420px]">
                                 <div className="h-48 overflow-hidden">
                                     <img
                                         src={project.image}
