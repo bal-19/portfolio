@@ -19,7 +19,8 @@ export const Home = () => {
                 <Galaxy
                     mouseRepulsion={false}
                     mouseInteraction={false}
-                    density={0.8}
+                    density={0.9}
+                    glowIntensity={0.2}
                 />
             </div>
 
