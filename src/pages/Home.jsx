@@ -7,6 +7,7 @@ import { AboutSection } from "../components/AboutSection";
 import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
+import SpotifyIslandAnimated from "../components/SpotifyIsland";
 
 export const Home = () => {
     return (
@@ -24,8 +25,9 @@ export const Home = () => {
                 />
             </div>
 
-            {/* Navbar */}
-            <Navbar />
+            {/* Dynamic Island */}
+            <SpotifyIslandAnimated />;
+
             {/* Main Content */}
             <main className="h-screen w-screen overflow-y-scroll snap-y snap-mandatory">
                 <HeroSection />
