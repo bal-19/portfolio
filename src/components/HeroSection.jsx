@@ -1,4 +1,5 @@
 import { ArrowDown } from "lucide-react";
+import TextType from "@/components/lib/TextType";
 
 export const HeroSection = () => {
     return (
@@ -23,11 +24,17 @@ export const HeroSection = () => {
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        I’m a backend developer who enjoys solving logical
-                        challenges. A dedicated backend developer focused on
-                        building efficient systems.
-                    </p>
+                    <TextType
+                        text={[
+                            "I’m a backend developer who enjoys solving logical challenges. A dedicated backend developer focused on building efficient systems.",
+                            "Passionate about creating scalable backend architectures and optimizing performance for seamless user experiences.",
+                            "Committed to writing clean, maintainable code and continuously learning new technologies to improve backend solutions."
+                        ]}
+                        typingSpeed={40}
+                        as='p'
+                        pauseDuration={700}
+                        showCursor={true}
+                        className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3" />
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
                         <a href="#projects" className="cosmic-button">

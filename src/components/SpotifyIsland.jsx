@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LiveIsland from "react-live-island";
-import { Clock } from "lucide-react";
+import CountUp from "@/components/lib/CountUp";
 import { FaSpotify } from "react-icons/fa"
 
 export default function SpotifyIslandNowPlaying() {
@@ -9,7 +9,11 @@ export default function SpotifyIslandNowPlaying() {
     const [progressMs, setProgressMs] = useState(0);
     const [durationMs, setDurationMs] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [time, setTime] = useState(() => new Date().toLocaleTimeString("id-ID", { hour12: false }));
+    const [time, setTime] = useState({
+        hour: 0,
+        minute: 0,
+        second: 0,
+    });
     const [showTime, setShowTime] = useState(true);
 
     const CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
@@ -112,10 +116,18 @@ export default function SpotifyIslandNowPlaying() {
 
     // Waktu real-time (untuk tampilan kecil)
     useEffect(() => {
-        const timer = setInterval(() => {
-            setTime(new Date().toLocaleTimeString("id-ID", { hour12: false }));
-        }, 1000);
-        return () => clearInterval(timer);
+        const updateTime = () => {
+            const now = new Date();
+            setTime({
+                hour: now.getHours(),
+                minute: now.getMinutes(),
+                second: now.getSeconds(),
+            });
+        };
+
+        updateTime(); // initial
+        const interval = setInterval(updateTime, 1000);
+        return () => clearInterval(interval);
     }, []);
 
     // Ganti antara jam dan current song (hanya kalau ada track)
@@ -146,9 +158,29 @@ export default function SpotifyIslandNowPlaying() {
                             className={`absolute inset-0 flex items-center justify-center gap-1 transition-opacity duration-700 ${showTime || !track ? "opacity-100" : "opacity-0"
                                 }`}
                         >
-                            <p className="text-lg font-mono tracking-wider text-white">
-                                {time}
-                            </p>
+                            <div className="flex items-center justify-center gap-1 text-lg text-white">
+                                <CountUp
+                                    to={time.hour}
+                                    direction="up"
+                                    duration={0.5}
+                                    prefix={time.hour < 10 ? "0" : ""}
+                                />
+                                <span>:</span>
+                                <CountUp
+                                    to={time.minute}
+                                    direction="up"
+                                    duration={0.5}
+                                    prefix={time.minute < 10 ? "0" : ""}
+                                />
+                                <span>:</span>
+                                <CountUp
+                                    to={time.second}
+                                    direction="up"
+                                    duration={0.5}
+                                    prefix={time.second < 10 ? "0" : ""}
+                                />
+                            </div>
+
                         </div>
 
                         {/* Lagu */}
