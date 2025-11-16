@@ -62,7 +62,7 @@ export const SkillsSection = () => {
                 initialOpacity={0}
             >
                 <div className="container mx-auto max-w-5xl">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold mb- text-center">
                         My <span className="text-primary"> Skills</span>
                     </h2>
 
@@ -71,6 +71,7 @@ export const SkillsSection = () => {
                             height: "200px",
                             position: "relative",
                             overflow: "hidden",
+                            marginTop: "150px"
                         }}
                     >
                         <LogoLoop
