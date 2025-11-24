@@ -16,14 +16,14 @@ export const Home = () => {
             <ThemeToggle />
 
             {/* Background Effects */}
-            <div className="fixed inset-0 -z-0 pointer-events-auto">
+            {/* <div className="fixed inset-0 -z-0 pointer-events-auto">
                 <Galaxy
                     mouseRepulsion={false}
                     mouseInteraction={false}
                     density={0.9}
                     glowIntensity={0.2}
                 />
-            </div>
+            </div> */}
 
             {/* Dynamic Island */}
             <SpotifyIslandAnimated />;
