@@ -46,8 +46,8 @@ const skillLogos = [
         name: "PostgreSQL",
         href: "https://www.postgresql.org/",
     },
-    { node: <SiOdoo />, name: "Odoo", href: "https://www.odoo.com/" },
-    { node: <SiFigma />, name: "Figma", href: "https://www.figma.com/" },
+    // { node: <SiOdoo />, name: "Odoo", href: "https://www.odoo.com/" },
+    // { node: <SiFigma />, name: "Figma", href: "https://www.figma.com/" },
 ];
 
 export const SkillsSection = () => {
