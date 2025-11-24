@@ -83,7 +83,7 @@ export const AboutSection = () => {
                                 </h3>
                                 <div className="flex items-center gap-2 text-muted-foreground mb-4">
                                     <MapPin className="w-4 h-4" />
-                                    <span>Malang, East Java, Indonesia</span>
+                                    <span>Batu, East Java, Indonesia</span>
                                 </div>
                             </div>
 
