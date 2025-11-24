@@ -45,7 +45,7 @@ export default function SpotifyIslandNowPlaying() {
             });
 
             const data = await res.json();
-            const expiresAt = Date.now() + data.expires_in * 1000; // waktu kedaluwarsa token
+            const expiresAt = Date.now() + data.expires_in * 1000;
 
             localStorage.setItem("spotify_token", data.access_token);
             localStorage.setItem("spotify_token_expiry", expiresAt.toString());
@@ -102,7 +102,6 @@ export default function SpotifyIslandNowPlaying() {
         return () => clearTimeout(timeoutId);
     }, [token]);
 
-
     // progress bar berjalan
     useEffect(() => {
         if (!isPlaying) return;
@@ -114,7 +113,7 @@ export default function SpotifyIslandNowPlaying() {
 
     const progressPercent = durationMs ? (progressMs / durationMs) * 100 : 0;
 
-    // Waktu real-time (untuk tampilan kecil)
+    // Waktu real-time
     useEffect(() => {
         const updateTime = () => {
             const now = new Date();
@@ -125,14 +124,14 @@ export default function SpotifyIslandNowPlaying() {
             });
         };
 
-        updateTime(); // initial
+        updateTime();
         const interval = setInterval(updateTime, 1000);
         return () => clearInterval(interval);
     }, []);
 
-    // Ganti antara jam dan current song (hanya kalau ada track)
+    // Toggle antara jam dan current song
     useEffect(() => {
-        if (!track) return; // kalau tidak ada lagu, tetap jam
+        if (!track) return;
         const toggle = setInterval(() => {
             setShowTime((prev) => !prev);
         }, 5000);
@@ -143,89 +142,125 @@ export default function SpotifyIslandNowPlaying() {
         <LiveIsland
             smallClassName="text-xs"
             largeClassName="text-7xl"
-            largeHeight={100}
-            smallHeight={42}
-            smallWidth={160}
+            largeHeight={130}
+            smallHeight={38}
+            smallWidth={170}
             initialAnimation
             className="flex w-full"
         >
             {(isSmall) =>
                 isSmall ? (
-                    // Tampilan kecil
-                    <div className="relative flex items-center justify-center w-full h-full overflow-hidden select-none px-2">
+                    // Tampilan kecil - iOS style
+                    <div className="relative flex items-center justify-center w-full h-full overflow-hidden select-none px-3 backdrop-blur-2xl bg-black/80 rounded-full shadow-lg">
                         {/* Jam */}
                         <div
-                            className={`absolute inset-0 flex items-center justify-center gap-1 transition-opacity duration-700 ${showTime || !track ? "opacity-100" : "opacity-0"
+                            className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${showTime || !track ? "opacity-100 scale-100" : "opacity-0 scale-95"
                                 }`}
                         >
-                            <div className="flex items-center justify-center gap-1 text-lg text-white">
+                            <div className="flex items-center gap-0.5 text-base font-semibold text-white tracking-tight">
                                 <CountUp
                                     to={time.hour}
                                     direction="up"
-                                    duration={0.5}
+                                    duration={0.3}
                                     prefix={time.hour < 10 ? "0" : ""}
                                 />
-                                <span>:</span>
+                                <span className="animate-pulse">:</span>
                                 <CountUp
                                     to={time.minute}
                                     direction="up"
-                                    duration={0.5}
+                                    duration={0.3}
                                     prefix={time.minute < 10 ? "0" : ""}
                                 />
-                                <span>:</span>
-                                <CountUp
-                                    to={time.second}
-                                    direction="up"
-                                    duration={0.5}
-                                    prefix={time.second < 10 ? "0" : ""}
-                                />
                             </div>
-
                         </div>
 
                         {/* Lagu */}
                         {track && (
                             <div
-                                className={`absolute inset-0 flex items-center justify-center gap-1 transition-opacity duration-700 ${showTime ? "opacity-0" : "opacity-100"
+                                className={`absolute inset-0 flex items-center justify-center gap-2 px-3 transition-all duration-500 ${showTime ? "opacity-0 scale-95" : "opacity-100 scale-100"
                                     }`}
                             >
-                                <FaSpotify className="w-5 h-5 text-green-500" />
-                                <p className="text-lg font-medium text-white truncate max-w-[90px]">
-                                    {track.title}
-                                </p>
+                                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/20">
+                                    <FaSpotify className="w-4.5 h-4.5 text-green-500" />
+                                </div>
+                                <div className="flex items-center gap-1 flex-1 min-w-0">
+                                    <div className="flex flex-col gap-0.5 w-4 justify-center">
+                                        <div className="w-1 h-2 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '0ms', animationDuration: '800ms' }}></div>
+                                        <div className="w-1 h-3 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '150ms', animationDuration: '800ms' }}></div>
+                                        <div className="w-1 h-2 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '300ms', animationDuration: '800ms' }}></div>
+                                    </div>
+                                    <p className="text-base font-medium text-white truncate">
+                                        {track.title}
+                                    </p>
+                                </div>
                             </div>
                         )}
                     </div>
                 ) : track ? (
-                    // Tampilan besar (full width)
-                    <div className="flex flex-col w-full px-5 py-4">
-                        <div className="flex items-center w-full gap-4">
-                            <img
-                                src={track.albumArt}
-                                alt="Album"
-                                className="w-18 h-18 rounded-xl shadow-md object-cover flex-shrink-0 transition-all duration-700 ease-in-out transform hover:scale-105"
-                            />
-                            <div className="flex flex-col w-full overflow-hidden">
-                                <p className="font-semibold text-lg truncate">{track.title}</p>
-                                <p className="text-gray-400 text-sm truncate">
-                                    {track.artist}
-                                </p>
+                    // Tampilan besar - iOS style dengan blur
+                    <div className="flex flex-col w-full h-full backdrop-blur-3xl bg-black/70 rounded-[2.5rem] shadow-2xl overflow-hidden border border-white/10">
+                        {/* Background gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
 
-                                {/* Progress bar */}
-                                <div className="mt-3 w-full h-1.5 bg-gray-700/60 rounded-full overflow-hidden">
-                                    <div
-                                        className="h-full bg-green-500 rounded-full transition-all duration-500"
-                                        style={{ width: `${progressPercent}%` }}
-                                    />
+                        <div className="relative flex items-center w-full gap-4 px-6 py-5">
+                            {/* Album art dengan shadow yang lebih dalam */}
+                            <div className="relative flex-shrink-0">
+                                <div className="absolute inset-0 bg-green-500/20 rounded-2xl blur-xl"></div>
+                                <img
+                                    src={track.albumArt}
+                                    alt="Album"
+                                    className="relative w-20 h-20 rounded-2xl shadow-2xl object-cover transition-all duration-500 ease-out transform hover:scale-105"
+                                />
+                            </div>
+
+                            {/* Track info */}
+                            <div className="flex flex-col flex-1 min-w-0 gap-2">
+                                <div className="flex items-center gap-2">
+                                    <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/20 backdrop-blur-sm">
+                                        <FaSpotify className="w-4 h-4 text-green-500" />
+                                    </div>
+                                    <span className="text-xs font-semibold text-green-400 uppercase tracking-wider">
+                                        Now Playing
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <p className="font-bold text-lg text-white truncate mb-0.5 leading-tight">
+                                        {track.title}
+                                    </p>
+                                    <p className="text-sm text-gray-300/80 truncate font-medium">
+                                        {track.artist}
+                                    </p>
+                                </div>
+
+                                {/* Progress bar dengan styling iOS */}
+                                <div className="flex items-center gap-3 mt-1">
+                                    <div className="flex-1 h-1 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm">
+                                        <div
+                                            className="h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full transition-all duration-300 ease-linear shadow-lg shadow-green-500/30"
+                                            style={{ width: `${progressPercent}%` }}
+                                        />
+                                    </div>
+                                    {isPlaying && (
+                                        <div className="flex items-center gap-0.5">
+                                            <div className="w-0.5 h-2.5 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '0ms', animationDuration: '800ms' }}></div>
+                                            <div className="w-0.5 h-3.5 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '150ms', animationDuration: '800ms' }}></div>
+                                            <div className="w-0.5 h-3 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '300ms', animationDuration: '800ms' }}></div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
                     </div>
                 ) : (
-                    <div className="flex justify-center items-center h-full py-4 w-full">
-                        <p className="px-4 py-1.5 text-sm font-medium text-gray-300 bg-gray-800/60 border border-gray-700 rounded-full">
-                            No songs are playing 🎧
-                        </p>
+                    // No song playing - iOS style
+                    <div className="flex justify-center items-center h-full w-full backdrop-blur-3xl bg-black/70 rounded-[2.5rem] shadow-2xl border border-white/10">
+                        <div className="flex items-center gap-2 px-5 py-3 bg-white/5 backdrop-blur-sm rounded-full border border-white/10">
+                            <div className="w-2 h-2 rounded-full bg-gray-400 animate-pulse"></div>
+                            <p className="text-sm font-medium text-gray-300">
+                                No songs playing
+                            </p>
+                        </div>
                     </div>
                 )
             }
