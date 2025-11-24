@@ -18,7 +18,7 @@ export const AboutSection = () => {
     ];
 
     return (
-        <section id="about" className="py-24 px-4 relative bg-background">
+        <section id="about" className="py-24 px-4 relative">
             <FadeContent
                 blur={false}
                 duration={800}
