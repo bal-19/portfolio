@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import TextType from "@/components/lib/TextType";
+import FadeContent from "@/components/lib/FadeContent";
 
 export const HeroSection = () => {
     return (
@@ -10,18 +11,27 @@ export const HeroSection = () => {
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <div className="space-y-6">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                        <span className="opacity-0 animate-fade-in">
-                            {" "}
-                            Hi, I'm
-                        </span>
-                        <span className="text-primary opacity-0 animate-fade-in-delay-1">
-                            {" "}
-                            Iqbal
-                        </span>
-                        <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-                            {" "}
-                            Haidee
-                        </span>
+                        <FadeContent
+                            blur={false}
+                            duration={800}
+                            easing="ease-out"
+                            delay={120}
+                            threshold={0.3}
+                            initialOpacity={0}
+                        >
+                            <span className="">
+                                {" "}
+                                Hi, I'm
+                            </span>
+                            <span className="text-primary">
+                                {" "}
+                                Iqbal
+                            </span>
+                            <span className="text-gradient ml-2">
+                                {" "}
+                                Haidee
+                            </span>
+                        </FadeContent>
                     </h1>
 
                     <TextType

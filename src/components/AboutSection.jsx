@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import FadeContent from "@/components/lib/FadeContent";
-import { Code2, Briefcase, Coffee, Music, Trophy, MapPin, Download } from "lucide-react";
+import { Code2, Briefcase, Coffee, Music, Trophy, MapPin } from "lucide-react";
 
 export const AboutSection = () => {
     const [activeTab, setActiveTab] = useState(0);

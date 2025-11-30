@@ -1,4 +1,4 @@
-import { ArrowRight, Github, ExternalLink } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import FadeContent from "@/components/lib/FadeContent";
 
 const projects = [
