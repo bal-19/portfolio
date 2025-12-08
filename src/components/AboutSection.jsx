@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
 import FadeContent from "@/components/lib/FadeContent";
+import ProfileCard from "@/components/lib/reactbits/ProfileCard";
 import { Code2, Briefcase, Coffee, Music, Trophy, MapPin } from "lucide-react";
 
 export const AboutSection = () => {
-    const [activeTab, setActiveTab] = useState(0);
-
     const stats = [
         { icon: Briefcase, label: "Years Experience", value: "4+", color: "from-blue-500 to-cyan-500" },
         { icon: Code2, label: "Projects Completed", value: "30+", color: "from-green-500 to-emerald-500" },
@@ -38,38 +36,19 @@ export const AboutSection = () => {
                             <div className="relative w-full max-w-md mx-auto">
                                 {/* Avatar Container with Glow Effect */}
                                 <div className="relative">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-2xl opacity-30 animate-pulse" />
-                                    <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-full p-8 border-4 border-primary/20 shadow-2xl">
-                                        {/* Developer Illustration */}
-                                        <svg
-                                            viewBox="0 0 200 200"
-                                            className="w-full h-full"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            {/* Head */}
-                                            <circle cx="100" cy="70" r="35" fill="#3b82f6" opacity="0.8" />
-
-                                            {/* Body */}
-                                            <rect x="70" y="100" width="60" height="70" rx="10" fill="#10b981" opacity="0.8" />
-
-                                            {/* Laptop */}
-                                            <rect x="60" y="140" width="80" height="50" rx="5" fill="#1e293b" />
-                                            <rect x="65" y="145" width="70" height="35" rx="3" fill="#0ea5e9" opacity="0.3" />
-
-                                            {/* Code Lines */}
-                                            <line x1="70" y1="155" x2="90" y2="155" stroke="#22c55e" strokeWidth="2" />
-                                            <line x1="70" y1="162" x2="110" y2="162" stroke="#3b82f6" strokeWidth="2" />
-                                            <line x1="70" y1="169" x2="95" y2="169" stroke="#a855f7" strokeWidth="2" />
-                                        </svg>
-                                    </div>
-                                </div>
-
-                                {/* Floating Icons */}
-                                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full p-4 shadow-lg animate-bounce">
-                                    <Code2 className="w-6 h-6 text-white" />
-                                </div>
-                                <div className="absolute -bottom-4 -left-4 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full p-4 shadow-lg animate-bounce" style={{ animationDelay: "0.5s" }}>
-                                    <Trophy className="w-6 h-6 text-white" />
+                                    <ProfileCard
+                                        innerGradient="linear-gradient(145deg, rgba(139, 92, 246, 0.2) 0%, rgba(168, 85, 247, 0.15) 100%)"
+                                        name="Iqbal Haidee"
+                                        title="Software Engineer"
+                                        handle="i.iqbal19"
+                                        status="Online"
+                                        contactText="Follow Me"
+                                        avatarUrl="public/profiles/about.png"
+                                        showUserInfo={true}
+                                        enableTilt={true}
+                                        enableMobileTilt={true}
+                                        onContactClick={() => window.open('https://www.instagram.com/i.iqbal19/', '_blank')}
+                                    />
                                 </div>
                             </div>
                         </div>
