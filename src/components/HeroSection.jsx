@@ -16,7 +16,7 @@ export const HeroSection = () => {
                             duration={800}
                             easing="ease-out"
                             delay={120}
-                            threshold={0.3}
+                            threshold={0.1}
                             initialOpacity={0}
                         >
                             <span className="">

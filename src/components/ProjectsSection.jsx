@@ -31,7 +31,7 @@ export const ProjectsSection = () => {
                     duration={800}
                     easing="ease-out"
                     delay={120}
-                    threshold={0.3}
+                    threshold={0.1}
                     initialOpacity={0}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">

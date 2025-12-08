@@ -19,19 +19,19 @@ export const AboutSection = () => {
 
     return (
         <section id="about" className="py-24 px-4 relative">
-            <FadeContent
-                blur={false}
-                duration={800}
-                easing="ease-out"
-                delay={120}
-                threshold={0.3}
-                initialOpacity={0}
-            >
-                <div className="container mx-auto max-w-6xl">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
-                        About <span className="text-primary">Me</span>
-                    </h2>
+            <div className="container mx-auto max-w-6xl">
+                <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+                    About <span className="text-primary">Me</span>
+                </h2>
 
+                <FadeContent
+                    blur={false}
+                    duration={800}
+                    easing="ease-out"
+                    delay={120}
+                    threshold={0.1}
+                    initialOpacity={0}
+                >
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         {/* Left Side - Illustration */}
                         <div className="relative">
@@ -108,8 +108,18 @@ export const AboutSection = () => {
                             </div>
                         </div>
                     </div>
+                </FadeContent>
 
-                    {/* Stats Section */}
+
+                {/* Stats Section */}
+                <FadeContent
+                    blur={false}
+                    duration={800}
+                    easing="ease-out"
+                    delay={120}
+                    threshold={0.1}
+                    initialOpacity={0}
+                >
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
                         {stats.map((stat, index) => (
                             <div
@@ -124,8 +134,17 @@ export const AboutSection = () => {
                             </div>
                         ))}
                     </div>
+                </FadeContent>
 
-                    {/* Interests Section */}
+                {/* Interests Section */}
+                <FadeContent
+                    blur={false}
+                    duration={800}
+                    easing="ease-out"
+                    delay={120}
+                    threshold={0.1}
+                    initialOpacity={0}
+                >
                     <div className="mt-16">
                         <h3 className="text-2xl font-bold text-center mb-8">
                             Beyond <span className="text-primary">Coding</span>
@@ -143,8 +162,8 @@ export const AboutSection = () => {
                             ))}
                         </div>
                     </div>
-                </div>
-            </FadeContent>
-        </section>
+                </FadeContent>
+            </div>
+        </section >
     );
 };

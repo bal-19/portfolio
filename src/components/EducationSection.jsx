@@ -71,7 +71,7 @@ export const EducationSection = () => {
                 duration={800}
                 easing="ease-out"
                 delay={120}
-                threshold={0.3}
+                threshold={0.1}
                 initialOpacity={0}
             >
                 <div className="max-w-7xl mx-auto">
