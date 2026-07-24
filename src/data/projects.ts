@@ -29,6 +29,6 @@ export const projects: ProjectMeta[] = [
   { accent: 'gold', stack: ['Go', 'SQLite'], live: '#', code: '#' },
   { accent: 'blue', stack: ['Laravel', 'MySQL'], live: '#', code: '#' },
   { accent: 'gold', stack: ['Prometheus', 'Grafana', 'Go'], live: '#', code: '#' },
-  { accent: 'blue', span: 'col-span-2', stack: ['Laravel', 'Redis', 'JWT'], live: '#', code: '#' },
-  { accent: 'green', span: 'col-span-2', stack: ['PHP', 'RabbitMQ'], live: '#', code: '#' },
+  { accent: 'blue', span: 'sm:col-span-2', stack: ['Laravel', 'Redis', 'JWT'], live: '#', code: '#' },
+  { accent: 'green', span: 'sm:col-span-2', stack: ['PHP', 'RabbitMQ'], live: '#', code: '#' },
 ]

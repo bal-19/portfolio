@@ -1,4 +1,10 @@
-import { createContext, useMemo, useState, type ReactNode } from 'react'
+import {
+  createContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from 'react'
 import { id } from './id'
 import { en } from './en'
 import type { Dictionary } from './types'
@@ -21,6 +27,10 @@ interface LangProviderProps {
 
 export function LangProvider({ children }: LangProviderProps) {
   const [lang, setLang] = useState<Lang>('id')
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
 
   const value = useMemo<LangContextValue>(
     () => ({
