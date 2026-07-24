@@ -21,6 +21,14 @@ export const id: Dictionary = {
       { value: '5+ thn', label: 'Pengalaman' },
       { value: 'Kotamu', label: 'Berbasis di · GMT+7' },
     ],
+    splashes: [
+      'Bisa bikin API juga!',
+      '100% bebas bug*',
+      'Sudah dark mode!',
+      'Ditenagai kopi!',
+      'Hobi Ctrl+S!',
+      'Rilis hari Jumat!',
+    ],
   },
   about: {
     kicker: 'Tentang',
@@ -42,6 +50,12 @@ export const id: Dictionary = {
   stack: {
     kicker: 'Teknologi',
     title: 'Perkakas andalan',
+    tiers: {
+      legendary: '★ Legendaris',
+      epic: '◆ Epik',
+      rare: '● Langka',
+      common: '○ Umum',
+    },
   },
   work: {
     kicker: 'Proyek Pilihan',

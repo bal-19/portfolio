@@ -15,6 +15,7 @@ interface StatCellProps {
   label: ReactNode
   tone?: StatTone
   live?: boolean
+  footer?: ReactNode
   style?: CSSProperties
 }
 
@@ -23,6 +24,7 @@ export function StatCell({
   label,
   tone = 'muted',
   live = false,
+  footer,
   style = {},
 }: StatCellProps) {
   const color = TONE[tone]
@@ -79,6 +81,7 @@ export function StatCell({
       >
         {label}
       </span>
+      {footer && <div style={{ marginTop: 4 }}>{footer}</div>}
     </div>
   )
 }

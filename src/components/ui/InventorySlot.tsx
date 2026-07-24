@@ -1,6 +1,7 @@
 import { useState, type CSSProperties, type ReactNode } from 'react'
 
 type SlotAccent = 'green' | 'blue'
+type TooltipTone = 'gold' | 'blue' | 'green' | 'muted'
 
 const GLOW: Record<SlotAccent, string> = {
   green: 'var(--glow-green)',
@@ -10,12 +11,21 @@ const EDGE: Record<SlotAccent, string> = {
   green: 'var(--ore-green-bright)',
   blue: 'var(--ore-blue-bright)',
 }
+const TOOLTIP_TONE: Record<TooltipTone, string> = {
+  gold: 'var(--ore-gold-bright)',
+  blue: 'var(--ore-blue-bright)',
+  green: 'var(--ore-green-bright)',
+  muted: 'var(--ore-text-muted)',
+}
 
 interface InventorySlotProps {
   icon: ReactNode
   label?: ReactNode
   accent?: SlotAccent
   featured?: boolean
+  tooltip?: string
+  tooltipSub?: string
+  tooltipTone?: TooltipTone
   style?: CSSProperties
 }
 
@@ -24,6 +34,9 @@ export function InventorySlot({
   label,
   accent = 'blue',
   featured = false,
+  tooltip,
+  tooltipSub,
+  tooltipTone = 'muted',
   style = {},
 }: InventorySlotProps) {
   const [hover, setHover] = useState(false)
@@ -52,6 +65,7 @@ export function InventorySlot({
         ...style,
       }}
     >
+      {featured && <span className="enchant-glint" aria-hidden />}
       <div
         style={{
           fontSize: featured ? 40 : 30,
@@ -76,6 +90,49 @@ export function InventorySlot({
         >
           {label}
         </span>
+      )}
+      {tooltip && hover && (
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 'calc(100% + 10px)',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            zIndex: 10,
+            pointerEvents: 'none',
+            whiteSpace: 'nowrap',
+            padding: '7px 11px',
+            background: 'var(--ore-tooltip-bg)',
+            border: '2px solid var(--ore-tooltip-border)',
+            borderRadius: 'var(--radius-sm)',
+            boxShadow: 'var(--shadow-panel)',
+            fontFamily: 'var(--font-mono)',
+            textAlign: 'left',
+          }}
+        >
+          <div
+            style={{
+              fontSize: 12,
+              fontWeight: 700,
+              color: 'var(--ore-text-bright)',
+            }}
+          >
+            {tooltip}
+          </div>
+          {tooltipSub && (
+            <div
+              style={{
+                fontSize: 10,
+                fontWeight: 600,
+                marginTop: 3,
+                letterSpacing: '0.04em',
+                color: TOOLTIP_TONE[tooltipTone],
+              }}
+            >
+              {tooltipSub}
+            </div>
+          )}
+        </div>
       )}
     </div>
   )

@@ -34,61 +34,63 @@ export function Header() {
 
   return (
     <nav
-      className="sticky top-0 z-20 mb-7 flex items-center justify-between gap-4 border-b-2 border-ore-border py-4"
+      className="sticky top-0 z-20 border-b-2 border-ore-border"
       style={{
         backdropFilter: 'blur(8px)',
         WebkitBackdropFilter: 'blur(8px)',
         background: 'linear-gradient(var(--ore-bg), rgba(17,17,17,0.55))',
       }}
     >
-      <span
-        className="font-display text-lg font-bold tracking-tight text-ore-text-bright"
-        style={{ letterSpacing: '-0.01em' }}
-      >
-        {WORDMARK}
-        <span className="text-green-bright">.</span>dev
-      </span>
-
-      <div className="flex items-center gap-5">
-        <div className="hidden items-center gap-5 md:flex">
-          {links.map((n) => (
-            <a
-              key={n.href}
-              href={n.href}
-              className="font-mono text-xs font-semibold uppercase text-ore-text-muted"
-              style={{ letterSpacing: '0.08em' }}
-            >
-              {n.label}
-            </a>
-          ))}
-        </div>
-
-        <div
-          className="inline-flex overflow-hidden rounded-slot border-2 border-ore-border"
-          role="group"
-          aria-label="Language"
+      <div className="mx-auto flex max-w-container items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">
+        <span
+          className="font-display text-lg font-bold tracking-tight text-ore-text-bright"
+          style={{ letterSpacing: '-0.01em' }}
         >
-          <button
-            type="button"
-            onClick={() => setLang('id')}
-            aria-pressed={lang === 'id'}
-            style={toggleStyle('id')}
-          >
-            ID
-          </button>
-          <button
-            type="button"
-            onClick={() => setLang('en')}
-            aria-pressed={lang === 'en'}
-            style={toggleStyle('en')}
-          >
-            EN
-          </button>
-        </div>
+          {WORDMARK}
+          <span className="text-green-bright">.</span>dev
+        </span>
 
-        <Button color="green" size="sm" href="#contact">
-          {t.nav.contact}
-        </Button>
+        <div className="flex items-center gap-5">
+          <div className="hidden items-center gap-5 md:flex">
+            {links.map((n) => (
+              <a
+                key={n.href}
+                href={n.href}
+                className="font-mono text-xs font-semibold uppercase text-ore-text-muted"
+                style={{ letterSpacing: '0.08em' }}
+              >
+                {n.label}
+              </a>
+            ))}
+          </div>
+
+          <div
+            className="inline-flex overflow-hidden rounded-slot border-2 border-ore-border"
+            role="group"
+            aria-label="Language"
+          >
+            <button
+              type="button"
+              onClick={() => setLang('id')}
+              aria-pressed={lang === 'id'}
+              style={toggleStyle('id')}
+            >
+              ID
+            </button>
+            <button
+              type="button"
+              onClick={() => setLang('en')}
+              aria-pressed={lang === 'en'}
+              style={toggleStyle('en')}
+            >
+              EN
+            </button>
+          </div>
+
+          <Button color="green" size="sm" href="#contact">
+            {t.nav.contact}
+          </Button>
+        </div>
       </div>
     </nav>
   )

@@ -19,6 +19,7 @@ export interface HeroDict {
   cta1: string
   cta2: string
   stats: StatDict[]
+  splashes: string[]
 }
 
 export interface AboutDict {
@@ -32,9 +33,17 @@ export interface AboutDict {
   focus: string[]
 }
 
+export interface TierDict {
+  legendary: string
+  epic: string
+  rare: string
+  common: string
+}
+
 export interface StackDict {
   kicker: string
   title: string
+  tiers: TierDict
 }
 
 export interface FeaturedDict {

@@ -41,7 +41,7 @@ Skala display chunky: display 72px (lh .98), h1 48px, **h2 32px** (`--fs-h2`, lh
 
 ## Spacing, radius, bento grid
 
-- Base **8px grid** (`--sp-*`). Variasi bento ada di **span cell**, bukan gap. Gap 8–12px, container max **1120px** (`max-w-container`).
+- Base **8px grid** (`--sp-*`). Variasi bento ada di **span cell**, bukan gap. Gap 8–12px, container max **1360px** (`max-w-container`, token `--container-max`).
 - Radius kecil & tajam: `--radius-sm` 4px, `--radius-slot` 6px (slot/button/tag), `--radius-lg` 12px (panel).
 - **Variasikan ukuran cell antar section** — jangan grid seragam:
   - Hero `grid-cols-3`: name Panel `col-span-2 row-span-2` + kolom 3 StatCell.
@@ -80,6 +80,19 @@ Layout (`src/components/layout/`): `Header` (nav sticky + toggle ID/EN + tombol 
 - **Scroll-reveal:** `Reveal` pakai Framer Motion `whileInView` — `initial{opacity:0,y:22}` → `{opacity:1,y:0}`, `viewport once`, ease `cubic-bezier(.22,1,.36,1)`, durasi ~0.62s. Prop `delay` (ms) untuk **stagger** ~45–80ms per cell. Hormati `prefers-reduced-motion` (no-op).
 - **Smooth scroll:** Lenis (`hooks/useSmoothScroll`) + intersepsi anchor `#…` dengan offset nav; nonaktif saat reduced-motion.
 - **Micro-interaction:** transisi 120–360ms (`--dur-fast`/`--dur`/`--dur-slow`), ease-out untuk reveal/hover, ease-press untuk klik button. Tanpa bounce/parallax berlebih.
+
+## Game flourishes (referensi minecraft.net, diadaptasi)
+
+- **XP scroll bar** (`layout/XpScrollBar`) — progress scroll sebagai XP bar hijau tersegmen fixed di bawah + angka "LV" (= persen; emas saat 100).
+- **Splash text** — teks emas miring berdenyut di samping nama hero (`.anim-splash`), bergilir tiap 4 dtk, konten di `i18n hero.splashes` (bilingual).
+- **Item tooltip** — hover `InventorySlot` memunculkan tooltip gaya game (bg gelap + border violet `--ore-tooltip-*`): nama item + tier. Tier per item di `data/techStack.ts`, label tier di `i18n stack.tiers` (Legendaris/Epik/Langka/Umum → warna gold/blue/green/muted).
+- **Enchant glint** — kilau diagonal menyapu slot `featured` (`.enchant-glint`).
+- **World strata** (`layout/WorldStrata`) — penutup halaman full-bleed: garis rumput → strata batu dengan pixel "ore" aksen → bedrock. Motif senama sistem (Oreframe).
+- **PixelDivider** — urat ore kecil + garis pixel-dash di tengah gap antar section (net-zero spacing).
+- **Pixel mobs & partikel** — slime (lompat, berdiri di atas block), spirit (melayang), emerald (bobbing); partikel debu pixel melayang di backdrop. Sprite original berbasis grid (`ui/mobs.ts`), warna token.
+- **HUD hearts** — baris 5 hati pixel di StatCell "Tersedia" (prop `footer`).
+- **Chrome game** — `::selection` hijau, `:focus-visible` ring hijau, scrollbar gelap ber-thumb hijau saat hover, vignette halus di backdrop.
+- Semua animasi mati saat `prefers-reduced-motion`; semua elemen dekoratif `aria-hidden` + `pointer-events: none`; mob desktop-only.
 
 ## Ikonografi
 

@@ -49,7 +49,14 @@ export function SectionHeader({
             {kicker}
           </span>
         )}
-        <span style={{ flex: 1, height: 2, background: 'var(--ore-border)' }} />
+        <span
+          style={{
+            flex: 1,
+            height: 2,
+            backgroundImage:
+              'repeating-linear-gradient(90deg, var(--ore-border) 0 8px, transparent 8px 14px)',
+          }}
+        />
       </div>
       {title && (
         <h2

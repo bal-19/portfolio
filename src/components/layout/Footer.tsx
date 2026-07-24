@@ -3,6 +3,7 @@ import { useLang } from '@/hooks/useLang'
 import { Panel } from '@/components/ui/Panel'
 import { Button } from '@/components/ui/Button'
 import { Reveal } from '@/components/ui/Reveal'
+import { PixelMob } from '@/components/ui/PixelMob'
 
 const ICON_BASE = '727a85'
 const ICON_HOVER = '4ad5ff'
@@ -96,6 +97,23 @@ export function Footer() {
               <SocialLink key={s.slug} {...s} />
             ))}
           </div>
+
+          <PixelMob
+            variant="spirit"
+            unit={6}
+            className="absolute left-9 top-8 hidden md:block"
+          />
+          <PixelMob
+            variant="emerald"
+            unit={6}
+            className="absolute right-10 top-10 hidden md:block"
+          />
+          <PixelMob
+            variant="slime"
+            unit={6}
+            withShadow
+            className="absolute bottom-7 left-12 hidden lg:block"
+          />
         </Panel>
       </Reveal>
 

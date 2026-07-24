@@ -21,6 +21,14 @@ export const en: Dictionary = {
       { value: '5+ yrs', label: 'Experience' },
       { value: 'Your City', label: 'Based in · GMT+7' },
     ],
+    splashes: [
+      'Also builds APIs!',
+      '100% bug-free*',
+      'Now with dark mode!',
+      'Powered by coffee!',
+      'Ctrl+S enjoyer!',
+      'Ships on Fridays!',
+    ],
   },
   about: {
     kicker: 'About',
@@ -42,6 +50,12 @@ export const en: Dictionary = {
   stack: {
     kicker: 'Tech Stack',
     title: 'Tools of the trade',
+    tiers: {
+      legendary: '★ Legendary',
+      epic: '◆ Epic',
+      rare: '● Rare',
+      common: '○ Common',
+    },
   },
   work: {
     kicker: 'Selected Work',

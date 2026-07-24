@@ -24,6 +24,17 @@ export function HudBackdrop() {
           backgroundSize: '32px 32px',
         }}
       />
+      <div
+        aria-hidden
+        style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: -1,
+          pointerEvents: 'none',
+          background:
+            'radial-gradient(ellipse at 50% 30%, transparent 55%, rgba(0,0,0,0.35) 100%)',
+        }}
+      />
     </>
   )
 }

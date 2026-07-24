@@ -59,6 +59,10 @@
   --on-gold: #1b1204;
   --on-red: #fdeaea;
 
+  /* ── Item tooltip (game-style: dark violet frame) ── */
+  --ore-tooltip-bg: rgba(18, 8, 24, 0.96);
+  --ore-tooltip-border: #4a2c8f;
+
   /* ── Semantic link aliases ── */
   --link: var(--ore-blue-bright);
   --link-hover: var(--ore-blue);
@@ -73,7 +77,7 @@
   --ls-h2: -0.01em;
 
   /* ── Spacing / radius ── */
-  --container-max: 1120px;
+  --container-max: 1360px;
   --radius-sm: 4px;
   --radius: 8px;
   --radius-md: 10px;
@@ -136,8 +140,182 @@ a:hover {
   }
 }
 
+/* ── Pixel-mob animations ── */
+@keyframes slimeHop {
+  0%,
+  55%,
+  100% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: translateY(-9px) scaleX(0.95) scaleY(1.06);
+  }
+  60% {
+    transform: translateY(0) scaleX(1.12) scaleY(0.86);
+  }
+  72% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+}
+@keyframes mobFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@keyframes itemBob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(4deg);
+  }
+}
+@keyframes mobShadow {
+  0%,
+  55%,
+  100% {
+    transform: scaleX(1);
+    opacity: 0.45;
+  }
+  25% {
+    transform: scaleX(0.8);
+    opacity: 0.25;
+  }
+  60% {
+    transform: scaleX(1.15);
+    opacity: 0.5;
+  }
+}
+@keyframes particleDrift {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: var(--p-op, 0.3);
+  }
+  85% {
+    opacity: var(--p-op, 0.3);
+  }
+  100% {
+    transform: translateY(-260px);
+    opacity: 0;
+  }
+}
+
+.anim-slime {
+  animation: slimeHop 2.4s var(--ease-out) infinite;
+  transform-origin: bottom center;
+}
+.anim-float {
+  animation: mobFloat 3.2s ease-in-out infinite;
+}
+.anim-item {
+  animation: itemBob 2.8s ease-in-out infinite;
+}
+.anim-shadow {
+  animation: mobShadow 2.4s var(--ease-out) infinite;
+}
+.anim-particle {
+  animation: particleDrift linear infinite;
+}
+
+/* ── Game flourishes: splash text, enchant glint ── */
+@keyframes splashPulse {
+  0%,
+  100% {
+    transform: rotate(-8deg) scale(1);
+  }
+  50% {
+    transform: rotate(-8deg) scale(1.08);
+  }
+}
+.anim-splash {
+  animation: splashPulse 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes glintSweep {
+  0%,
+  55% {
+    transform: translateX(-180%) rotate(18deg);
+  }
+  85%,
+  100% {
+    transform: translateX(260%) rotate(18deg);
+  }
+}
+.enchant-glint {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.enchant-glint::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  bottom: -30%;
+  width: 34%;
+  background: linear-gradient(
+    105deg,
+    transparent,
+    rgba(255, 255, 255, 0.22) 45%,
+    rgba(146, 193, 255, 0.3) 55%,
+    transparent
+  );
+  animation: glintSweep 4.2s ease-in-out infinite;
+}
+
+/* ── Game chrome: selection, focus ring, scrollbar ── */
+::selection {
+  background: var(--ore-green-face);
+  color: var(--on-green);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ore-green-bright);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ore-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ore-surface-2);
+  border: 3px solid var(--ore-bg);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ore-green-face);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .anim-slime,
+  .anim-float,
+  .anim-item,
+  .anim-shadow,
+  .anim-particle,
+  .anim-splash {
+    animation: none;
+  }
+  .enchant-glint::after {
+    animation: none;
+    display: none;
+  }
+  .anim-particles-layer {
+    display: none;
   }
 }

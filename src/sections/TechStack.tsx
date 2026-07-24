@@ -2,7 +2,14 @@ import { useLang } from '@/hooks/useLang'
 import { InventorySlot } from '@/components/ui/InventorySlot'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Reveal } from '@/components/ui/Reveal'
-import { techStack } from '@/data/techStack'
+import { techStack, type TechTier } from '@/data/techStack'
+
+const TIER_TONE: Record<TechTier, 'gold' | 'blue' | 'green' | 'muted'> = {
+  legendary: 'gold',
+  epic: 'blue',
+  rare: 'green',
+  common: 'muted',
+}
 
 export function TechStack() {
   const { t } = useLang()
@@ -30,6 +37,9 @@ export function TechStack() {
               accent={s.accent}
               featured={s.featured}
               label={s.label}
+              tooltip={s.label}
+              tooltipSub={t.stack.tiers[s.tier]}
+              tooltipTone={TIER_TONE[s.tier]}
               style={{ height: '100%' }}
               icon={
                 <img
