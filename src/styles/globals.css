@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #0a0e14;
+  --color-surface: #12161f;
+  --color-surface-hover: #181d29;
+  --color-border: #232a38;
+  --color-text-primary: #e6e9ef;
+  --color-text-secondary: #8b93a7;
+  --color-accent-green: #3ddc97;
+  --color-accent-blue: #4fa3ff;
+  --color-accent-gold: #f5c451;
+  --color-accent-red: #ff5c5c;
+}
+
+body {
+  @apply bg-background text-text-primary font-sans antialiased;
+}
