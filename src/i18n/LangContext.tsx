@@ -7,6 +7,7 @@ export type Lang = 'id' | 'en'
 
 interface LangContextValue {
   lang: Lang
+  setLang: (lang: Lang) => void
   toggleLang: () => void
   t: Dictionary
 }
@@ -24,6 +25,7 @@ export function LangProvider({ children }: LangProviderProps) {
   const value = useMemo<LangContextValue>(
     () => ({
       lang,
+      setLang,
       toggleLang: () => setLang((prev) => (prev === 'id' ? 'en' : 'id')),
       t: lang === 'id' ? id : en,
     }),

@@ -1,4 +1,4 @@
-# Developer Portfolio
+# Portfolio
 
 Portfolio developer 1 halaman, bilingual (ID/EN), gaya bento grid + game-UI, dark theme. Dibangun dengan Vite + React + TypeScript + Tailwind CSS.
 

@@ -1,20 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-background: #0a0e14;
-  --color-surface: #12161f;
-  --color-surface-hover: #181d29;
-  --color-border: #232a38;
-  --color-text-primary: #e6e9ef;
-  --color-text-secondary: #8b93a7;
-  --color-accent-green: #3ddc97;
-  --color-accent-blue: #4fa3ff;
-  --color-accent-gold: #f5c451;
-  --color-accent-red: #ff5c5c;
+  /* ── Base surfaces (near-black → panel) ── */
+  --ore-black: #0d0d0e;
+  --ore-bg: #111111;
+  --ore-bg-raised: #191a1c;
+  --ore-surface: #23232a;
+  --ore-surface-2: #2b2c32;
+  --ore-surface-3: #1e1e1f;
+
+  /* ── Borders & dividers ── */
+  --ore-border-dim: #313233;
+  --ore-border: #3f3f3f;
+  --ore-border-strong: #48484a;
+  --ore-bevel-light: #58585a;
+  --ore-hairline: rgba(255, 255, 255, 0.06);
+
+  /* ── Text ── */
+  --ore-text: #d0d1d4;
+  --ore-text-bright: #fbfbfd;
+  --ore-text-muted: #727a85;
+  --ore-text-dim: #58585a;
+  --ore-text-on-accent: #001236;
+
+  /* ── Accent: GREEN (primary action / "go") ── */
+  --ore-green: #3e7e2b;
+  --ore-green-bright: #75b75d;
+  --ore-green-face: #52a535;
+  --ore-green-shadow: #2a5d1b;
+  --ore-green-deep: #2a641c;
+
+  /* ── Accent: BLUE (info / link / hover) ── */
+  --ore-blue: #2375b3;
+  --ore-blue-bright: #4ad5ff;
+  --ore-blue-face: #2f8fd6;
+  --ore-blue-shadow: #0f6ac1;
+  --ore-blue-glow: rgba(146, 193, 255, 0.5);
+
+  /* ── Accent: GOLD (highlight / badge) ── */
+  --ore-gold: #da8c1a;
+  --ore-gold-bright: #ffa41f;
+  --ore-gold-face: #d5901e;
+  --ore-gold-shadow: #a5680f;
+
+  /* ── Accent: RED (danger / rare tag) ── */
+  --ore-red: #b13c33;
+  --ore-red-bright: #d55e5e;
+  --ore-red-face: #c02d2d;
+  --ore-red-shadow: #8a2422;
+
+  /* ── On-accent foregrounds (text sitting on accent faces) ── */
+  --on-green: #eafce3;
+  --on-blue: #eaf6ff;
+  --on-gold: #1b1204;
+  --on-red: #fdeaea;
+
+  /* ── Semantic link aliases ── */
+  --link: var(--ore-blue-bright);
+  --link-hover: var(--ore-blue);
+
+  /* ── Typography ── */
+  --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --fs-h2: 32px;
+  --lh-h2: 1.08;
+  --ls-h2: -0.01em;
+
+  /* ── Spacing / radius ── */
+  --container-max: 1120px;
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-slot: 6px;
+
+  /* ── Effects: bevels (raised faces) ── */
+  --bevel-neutral: inset 0 2px 0 0 rgba(255, 255, 255, 0.1), 0 4px 0 0 var(--ore-bevel-light);
+  --bevel-neutral-pressed: inset 0 2px 0 0 rgba(255, 255, 255, 0.08), 0 1px 0 0 var(--ore-bevel-light);
+  --bevel-green: inset 0 2px 0 0 var(--ore-green-bright), 0 5px 0 0 var(--ore-green-shadow);
+  --bevel-green-pressed: inset 0 2px 0 0 var(--ore-green-bright), 0 1px 0 0 var(--ore-green-shadow);
+  --bevel-blue: inset 0 2px 0 0 var(--ore-blue-bright), 0 5px 0 0 var(--ore-blue-shadow);
+  --bevel-gold: inset 0 2px 0 0 var(--ore-gold-bright), 0 5px 0 0 var(--ore-gold-shadow);
+  --bevel-red: inset 0 2px 0 0 var(--ore-red-bright), 0 5px 0 0 var(--ore-red-shadow);
+
+  /* ── Effects: inset wells ── */
+  --inset-well: inset 0 2px 4px 0 rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+  --inset-slot: inset 0 2px 0 0 rgba(0, 0, 0, 0.45), inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
+
+  /* ── Effects: panel elevation ── */
+  --shadow-panel: 0 2px 0 0 rgba(0, 0, 0, 0.6), 0 8px 24px -8px rgba(0, 0, 0, 0.7);
+  --shadow-float: 0 4px 0 0 rgba(0, 0, 0, 0.55), 0 16px 40px -12px rgba(0, 0, 0, 0.8);
+
+  /* ── Effects: focus / hover glow ── */
+  --glow-blue: 0 0 0 2px var(--ore-blue-bright), 0 0 18px 0 var(--ore-blue-glow);
+  --glow-green: 0 0 0 2px var(--ore-green-bright), 0 0 18px 0 rgba(117, 183, 93, 0.45);
+
+  /* ── Motion ── */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-press: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 360ms;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-background text-text-primary font-sans antialiased;
+  @apply bg-ore-bg text-ore-text font-body antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+@keyframes orePulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
