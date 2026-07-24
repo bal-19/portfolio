@@ -4,6 +4,9 @@ import { Badge } from '@/components/ui/Badge'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Reveal } from '@/components/ui/Reveal'
 
+// Dummy profile photo (placeholder) — swap for your own portrait.
+const PORTRAIT_SRC = 'https://randomuser.me/api/portraits/men/32.jpg'
+
 export function About() {
   const { t } = useLang()
 
@@ -27,19 +30,15 @@ export function About() {
             bodyStyle={{ padding: 10, display: 'flex' }}
           >
             <div
-              className="flex w-full items-center justify-center rounded-slot"
-              style={{
-                minHeight: 260,
-                boxShadow: 'var(--inset-well)',
-                border: '2px dashed var(--ore-border-strong)',
-              }}
+              className="relative w-full overflow-hidden rounded-slot"
+              style={{ minHeight: 260, height: '100%', boxShadow: 'var(--inset-well)' }}
             >
-              <span
-                className="font-mono text-xs uppercase text-ore-text-dim"
-                style={{ letterSpacing: '0.1em' }}
-              >
-                {t.about.photoPlaceholder}
-              </span>
+              <img
+                src={PORTRAIT_SRC}
+                alt={t.about.photoPlaceholder}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
             </div>
           </Panel>
         </Reveal>
