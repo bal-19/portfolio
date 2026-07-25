@@ -98,7 +98,7 @@ export const id: Dictionary = {
     kicker: "▸ Let's build something",
     title: 'Have a project in mind?',
     p: 'Saya terbuka untuk proyek freelance, kolaborasi, maupun pengembangan produk digital. Jangan ragu untuk menghubungi saya.',
-    email: 'iqbalhaidee19@gmail.com',
+    phone: '087856754195',
   },
   footer: {
     note: '© 2026 · Dibuat dengan ❤️ oleh Iqbal',

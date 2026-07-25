@@ -82,7 +82,7 @@ export interface ContactDict {
   kicker: string
   title: string
   p: string
-  email: string
+  phone: string
 }
 
 export interface FooterDict {

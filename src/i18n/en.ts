@@ -98,7 +98,7 @@ export const en: Dictionary = {
     kicker: "▸ Let's build something",
     title: 'Have a project in mind?',
     p: 'I am open to freelance opportunities, collaborations, and building digital products. Feel free to reach out anytime.',
-    email: 'iqbalhaidee19@gmail.com',
+    phone: '087856754195',
   },
   footer: {
     note: '© 2026 · Built with ❤️ by Iqbal',
