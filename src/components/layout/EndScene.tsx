@@ -16,6 +16,7 @@ import {
 import { BlendFunction } from 'postprocessing'
 import {
     Box3,
+    Color,
     MathUtils,
     Vector2,
     Vector3,
@@ -32,6 +33,7 @@ const TARGET_SIZE = 30
 
 // Titik bedrock/portal frame (hasil kalibrasi dari debug capture sebelumnya)
 const FOCUS_POINT = new Vector3(0, 0, 0)
+const SSAO_COLOR = new Color('black')
 
 const ANGLE_START = -2.41
 const ANGLE_SWEEP = 0.3
@@ -279,7 +281,7 @@ export function EndScene() {
                             intensity={25}
                             luminanceInfluence={0.4}
                             bias={0.025}
-                            color="black"
+                            color={SSAO_COLOR}
                         />
 
                         {/* Bloom lebar & lembut (mipmapBlur) buat glow torch + eye/lava block
