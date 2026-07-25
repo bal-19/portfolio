@@ -92,6 +92,11 @@ export interface FooterDict {
   creditBy: string
 }
 
+export interface SceneDict {
+  /** HUD label saat backdrop 3D masih dimuat. */
+  loading: string
+}
+
 export interface Dictionary {
   nav: NavDict
   hero: HeroDict
@@ -102,4 +107,5 @@ export interface Dictionary {
   github: GithubDict
   contact: ContactDict
   footer: FooterDict
+  scene: SceneDict
 }

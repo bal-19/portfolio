@@ -105,4 +105,7 @@ export const en: Dictionary = {
     credit3d: '3D background',
     creditBy: 'by',
   },
+  scene: {
+    loading: 'Building terrain',
+  },
 }

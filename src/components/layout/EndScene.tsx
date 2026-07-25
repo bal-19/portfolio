@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useMemo, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import type { EventManager } from '@react-three/fiber'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, useProgress } from '@react-three/drei'
 import {
     EffectComposer,
     DepthOfField,
@@ -24,6 +24,7 @@ import {
     SRGBColorSpace,
 } from 'three'
 import { scrollProgress } from '@/lib/scrollProgress'
+import { useLang } from '@/hooks/useLang'
 
 const MODEL_URL = '/models/the-end/scene.gltf'
 const DRACO_PATH = '/draco/'
@@ -107,12 +108,89 @@ function CameraRig({ animate }: { animate: boolean }) {
     return null
 }
 
+// Placeholder yang mengisi layar selama GLTF (+ draco) masih diunduh: kabut void
+// ungu dengan portal glow berdenyut di layer yang sama dengan Canvas, plus chip
+// HUD progres kecil supaya loading terbaca sebagai bagian dari dunia, bukan spinner.
+function SceneLoader({ done }: { done: boolean }) {
+    const { t } = useLang()
+    const { progress } = useProgress()
+    const [gone, setGone] = useState(false)
+
+    useEffect(() => {
+        if (!done) return
+        const timer = window.setTimeout(() => setGone(true), 1000)
+        return () => window.clearTimeout(timer)
+    }, [done])
+
+    if (gone) return null
+
+    const pct = done ? 100 : Math.min(99, Math.round(progress))
+    const fade = { opacity: done ? 0 : 1, transition: 'opacity 800ms var(--ease-out)' }
+
+    return (
+        <>
+            <div
+                aria-hidden
+                style={{
+                    position: 'fixed', inset: 0, zIndex: -4, pointerEvents: 'none',
+                    background:
+                        'radial-gradient(60% 55% at 50% 55%, var(--end-haze) 0%, transparent 70%),' +
+                        'radial-gradient(90% 80% at 50% 50%, var(--end-haze-3) 0%, var(--end-void) 75%)',
+                    ...fade,
+                }}
+            >
+                <div
+                    className="anim-void-load"
+                    style={{
+                        position: 'absolute', left: '50%', top: '55%',
+                        width: 260, height: 260, marginLeft: -130, marginTop: -130,
+                        borderRadius: '50%',
+                        background:
+                            'radial-gradient(circle, var(--end-haze-2) 0%, transparent 68%)',
+                    }}
+                />
+            </div>
+
+            <div
+                aria-hidden
+                className="pointer-events-none fixed bottom-10 right-5 z-30 sm:right-8"
+                style={fade}
+            >
+                <div className="mb-1.5 flex items-baseline gap-2 font-mono text-xs uppercase tracking-[0.14em] text-ore-text-muted">
+                    <span>{t.scene.loading}</span>
+                    <span className="font-bold text-ore-green-bright">{pct}%</span>
+                </div>
+                <div
+                    style={{
+                        width: 148, height: 6,
+                        background: 'var(--ore-surface-3)',
+                        border: '1px solid var(--ore-border)',
+                    }}
+                >
+                    <div
+                        style={{
+                            height: '100%',
+                            width: `${pct}%`,
+                            background:
+                                'repeating-linear-gradient(90deg, var(--ore-green-bright) 0 10px, var(--ore-green-face) 10px 12px)',
+                            boxShadow: '0 0 10px rgba(117,183,93,0.55)',
+                            transition: 'width 240ms var(--ease-out)',
+                        }}
+                    />
+                </div>
+            </div>
+        </>
+    )
+}
+
 export function EndScene() {
     const [ready, setReady] = useState(false)
     const [settings] = useState(() => ({ animate: !reducedMotion(), lowPower: isLowPower() }))
     const onReady = useMemo(() => () => setReady(true), [])
 
     return (
+        <>
+        <SceneLoader done={ready} />
         <div
             aria-hidden
             style={{
@@ -251,6 +329,10 @@ export function EndScene() {
                     </EffectComposer>
                 )}
             </Canvas>
+
+            {/* Overlay penggelap: bikin scene 3D nyatu sebagai background, bukan elemen menonjol */}
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.5)' }} />
         </div>
+        </>
     )
 }

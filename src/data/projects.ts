@@ -12,7 +12,7 @@ export interface ProjectCopyByLang {
 }
 
 export interface FeaturedMeta {
-  accent: 'green'
+  accent: 'gold'
   stack: string[]
   live?: string
   code?: string
@@ -31,132 +31,58 @@ export interface ProjectMeta {
 // Sample data — add, edit, or remove projects directly here. Each entry
 // carries its own `id`/`en` copy, so both languages stay together in one place.
 export const featuredProject: FeaturedMeta = {
-  accent: 'green',
-  stack: ['Laravel', 'Postgres', 'Redis', 'Kafka'],
+  accent: 'gold',
+  stack: ['Vite', 'Express', 'Postgre', 'Gemini', 'Baileys'],
   live: '#',
-  code: '#',
+  code: 'https://github.com/bal-19/whatsapp-crazy-bot',
   content: {
     id: {
       tag: 'Proyek Unggulan',
-      title: 'Proyek Utama',
-      desc: 'Deskripsi proyek unggulanmu — masalah yang dipecahkan, skala yang ditangani, dan keputusan teknis penting di baliknya. Ganti teks ini sesuai proyek nyatamu.',
+      title: 'Whatsapp AI Bot',
+      desc: 'WhatsApp AI Bot adalah platform otomasi WhatsApp berbasis AI yang mengintegrasikan Google Gemini, dashboard admin realtime, dan penyimpanan data di Supabase dalam arsitektur monorepo. Sistem ini mendukung percakapan kontekstual, analisis serta generasi gambar dan dokumen, sekaligus menyediakan monitoring, konfigurasi, dan manajemen bot melalui antarmuka web. Dibangun menggunakan Node.js, React, TypeScript, dan Socket.IO untuk menghadirkan performa yang cepat, scalable, dan mudah dikembangkan.',
     },
     en: {
       tag: 'Featured Project',
-      title: 'Flagship Project',
-      desc: 'A description of your flagship project — the problem it solves, the scale it handles, and the key technical decisions behind it. Replace this with your real project.',
+      title: 'Whatsapp AI Bot',
+      desc: 'WhatsApp AI Bot is an AI-powered WhatsApp automation platform that integrates Google Gemini, a real-time admin dashboard, and Supabase within a monorepo architecture. It supports contextual conversations, image and document generation, while providing comprehensive bot monitoring, configuration, and management through a web interface. Built with Node.js, React, TypeScript, and Socket.IO, it delivers a fast, scalable, and maintainable developer experience.',
     },
   },
 }
 
 export const projects: ProjectMeta[] = [
   {
-    accent: 'blue',
-    stack: ['PHP', 'Redis', 'Vue'],
-    live: '#',
-    code: '#',
-    content: {
-      id: {
-        tag: 'Kategori',
-        title: 'Proyek Dua',
-        desc: 'Ringkasan singkat proyek — apa fungsinya dan teknologi intinya.',
-      },
-      en: {
-        tag: 'Category',
-        title: 'Project Two',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-    },
-  },
-  {
-    accent: 'gold',
-    stack: ['Go', 'SQLite'],
-    live: '#',
-    code: '#',
-    content: {
-      id: {
-        tag: 'Kategori',
-        title: 'Proyek Tiga',
-        desc: 'Ringkasan singkat proyek — apa fungsinya dan teknologi intinya.',
-      },
-      en: {
-        tag: 'Category',
-        title: 'Project Three',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-    },
-  },
-  {
-    accent: 'blue',
-    stack: ['Laravel', 'MySQL'],
-    live: '#',
-    code: '#',
-    content: {
-      id: {
-        tag: 'Kategori',
-        title: 'Proyek Empat',
-        desc: 'Ringkasan singkat proyek — apa fungsinya dan teknologi intinya.',
-      },
-      en: {
-        tag: 'Category',
-        title: 'Project Four',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-    },
-  },
-  {
-    accent: 'gold',
-    stack: ['Prometheus', 'Grafana', 'Go'],
-    live: '#',
-    code: '#',
-    content: {
-      id: {
-        tag: 'Kategori',
-        title: 'Proyek Lima',
-        desc: 'Ringkasan singkat proyek — apa fungsinya dan teknologi intinya.',
-      },
-      en: {
-        tag: 'Category',
-        title: 'Project Five',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-    },
-  },
-  {
-    accent: 'blue',
-    span: 'sm:col-span-2',
-    stack: ['Laravel', 'Redis', 'JWT'],
-    live: '#',
-    code: '#',
-    content: {
-      id: {
-        tag: 'Kategori',
-        title: 'Proyek Enam',
-        desc: 'Ringkasan singkat proyek — apa fungsinya dan teknologi intinya.',
-      },
-      en: {
-        tag: 'Category',
-        title: 'Project Six',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-    },
-  },
-  {
     accent: 'green',
-    span: 'sm:col-span-2',
-    stack: ['PHP', 'RabbitMQ'],
+    stack: ['Laravel', 'MySQL', 'Midtrans'],
+    live: '#',
+    code: 'https://github.com/bal-19/hadi-net',
+    content: {
+      id: {
+        tag: 'Tugas Sekolah',
+        title: 'Online Wifi Installation Orders',
+        desc: 'Aplikasi web untuk pemesanan pemasangan WiFi secara online dengan dashboard admin dan integrasi pembayaran Midtrans. Dibangun menggunakan Laravel dan Tailwind CSS untuk mempermudah pengelolaan pelanggan serta pesanan.',
+      },
+      en: {
+        tag: 'School Work',
+        title: 'Online Wifi Installation Orders',
+        desc: 'A web application for online WiFi installation orders with an admin dashboard and Midtrans payment integration. Built with Laravel and Tailwind CSS to simplify customer and order management.',
+      },
+    },
+  },
+  {
+    accent: 'gold',
+    stack: ['Vite', 'React', 'Tailwind'],
     live: '#',
     code: '#',
     content: {
       id: {
-        tag: 'Kategori',
-        title: 'Proyek Tujuh',
-        desc: 'Ringkasan singkat proyek — apa fungsinya dan teknologi intinya.',
+        tag: 'Freelance',
+        title: 'Website Portfolio Percetakan Hasanuddin',
+        desc: 'Landing page modern untuk Percetakan Hasanuddin, percetakan premium di Batu sejak 1985, yang menampilkan layanan, portofolio, dan informasi perusahaan dengan animasi interaktif. Dibangun menggunakan React 19, Vite, dan Tailwind CSS dengan fokus pada performa, pengalaman pengguna, dan kemudahan pengelolaan konten.',
       },
       en: {
-        tag: 'Category',
-        title: 'Project Seven',
-        desc: 'A short summary of the project — what it does and its core technology.',
+        tag: 'Freelance',
+        title: 'Website Portfolio Percetakan Hasanuddin',
+        desc: 'A modern marketing landing page for Percetakan Hasanuddin, showcasing its services, portfolio, and company profile with interactive animations. Built with React 19, Vite, and Tailwind CSS, focusing on performance, user experience, and maintainable content management.',
       },
     },
   },

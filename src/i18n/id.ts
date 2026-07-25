@@ -105,4 +105,7 @@ export const id: Dictionary = {
     credit3d: 'Latar 3D',
     creditBy: 'oleh',
   },
+  scene: {
+    loading: 'Memuat dunia',
+  },
 }

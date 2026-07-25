@@ -331,6 +331,23 @@ a:hover {
   animation: voidTwinkle 4.5s ease-in-out infinite;
 }
 
+/* ── The End: loading backdrop (sebelum model GLTF siap) ── */
+@keyframes voidLoadBreathe {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.anim-void-load {
+  animation: voidLoadBreathe 2.8s ease-in-out infinite;
+}
+
 /* ── Game chrome: selection, focus ring, scrollbar ── */
 ::selection {
   background: var(--ore-green-face);
@@ -367,7 +384,8 @@ a:hover {
   .anim-shadow,
   .anim-particle,
   .anim-splash,
-  .anim-void-star {
+  .anim-void-star,
+  .anim-void-load {
     animation: none;
   }
   .enchant-glint::after {
