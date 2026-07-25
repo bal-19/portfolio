@@ -916,7 +916,7 @@
       "label": "COLORS",
       "file_type": "code",
       "source_file": "src/components/layout/AmbientParticles.tsx",
-      "source_location": "L3",
+      "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_layout_ambientparticles_colors",
       "community": 16,
@@ -927,7 +927,7 @@
       "label": "PARTICLES",
       "file_type": "code",
       "source_file": "src/components/layout/AmbientParticles.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_layout_ambientparticles_particles",
       "community": 16,
@@ -938,7 +938,7 @@
       "label": "AmbientParticles()",
       "file_type": "code",
       "source_file": "src/components/layout/AmbientParticles.tsx",
-      "source_location": "L24",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_layout_ambientparticles_ambientparticles",
       "community": 16,
@@ -1034,10 +1034,21 @@
       "norm_label": "hudbackdrop.tsx"
     },
     {
+      "label": "STARS",
+      "file_type": "code",
+      "source_file": "src/components/layout/HudBackdrop.tsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_components_layout_hudbackdrop_stars",
+      "community": 31,
+      "community_name": "HudBackdrop Layout",
+      "norm_label": "stars"
+    },
+    {
       "label": "HudBackdrop()",
       "file_type": "code",
       "source_file": "src/components/layout/HudBackdrop.tsx",
-      "source_location": "L1",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_layout_hudbackdrop_hudbackdrop",
       "community": 31,
@@ -4964,7 +4975,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/layout/AmbientParticles.tsx",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_layout_ambientparticles",
@@ -4975,7 +4986,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/layout/AmbientParticles.tsx",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_layout_ambientparticles",
@@ -4986,7 +4997,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/layout/AmbientParticles.tsx",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_layout_ambientparticles",
@@ -5052,11 +5063,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/layout/HudBackdrop.tsx",
-      "source_location": "L1",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_layout_hudbackdrop",
       "target": "src_components_layout_hudbackdrop_hudbackdrop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/HudBackdrop.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_layout_hudbackdrop",
+      "target": "src_components_layout_hudbackdrop_stars",
       "confidence_score": 1.0
     },
     {
@@ -7846,5 +7868,5 @@
       "source_file": "docs/design-system.md"
     }
   ],
-  "built_at_commit": "e21c5bd82c6277fca43c589042caacdf901ec2b3"
+  "built_at_commit": "5f6015c78d857d62654fcd1a59a0098687b69ee9"
 }

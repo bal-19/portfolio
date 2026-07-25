@@ -53,5 +53,7 @@
   "51": "contributions.ts",
   "52": "ContributionGraph.tsx",
   "53": "contributions.ts",
-  "54": "GithubActivity.tsx"
+  "54": "GithubActivity.tsx",
+  "55": "fetch-github-stats.mjs",
+  "56": "EnderDragon.tsx"
 }

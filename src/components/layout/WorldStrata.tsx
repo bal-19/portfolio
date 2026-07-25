@@ -20,9 +20,9 @@ const STONE_FILLS = [
   'var(--ore-border-dim)',
 ]
 const ORE_FILLS = [
+  'var(--end-magenta)',
+  'var(--end-purpur)',
   'var(--ore-green-bright)',
-  'var(--ore-blue-bright)',
-  'var(--ore-gold-bright)',
 ]
 
 interface Cell {
@@ -71,9 +71,9 @@ export function WorldStrata() {
             height={TILE_H}
             patternUnits="userSpaceOnUse"
           >
-            {/* grass */}
-            <rect width={TILE_W} height={2} fill="var(--ore-green-bright)" />
-            <rect y={2} width={TILE_W} height={6} fill="var(--ore-green-face)" />
+            {/* end-stone crust */}
+            <rect width={TILE_W} height={2} fill="var(--end-stone)" />
+            <rect y={2} width={TILE_W} height={6} fill="var(--end-stone-dim)" />
             {grassNotches.map((c) => (
               <rect
                 key={`g${c}`}
@@ -81,7 +81,7 @@ export function WorldStrata() {
                 y={5}
                 width={CELL}
                 height={3}
-                fill="var(--ore-green-deep)"
+                fill="var(--end-purpur)"
               />
             ))}
             {/* stone + ore */}

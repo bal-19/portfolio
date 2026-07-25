@@ -91,12 +91,5 @@ export const HEART: MobDef = {
     r: 'var(--ore-red-bright)',
     h: 'var(--ore-text-bright)',
   },
-  grid: [
-    ' rr rr ',
-    'rhrrrrr',
-    'rrrrrrr',
-    ' rrrrr ',
-    '  rrr  ',
-    '   r   ',
-  ],
+  grid: [' rr rr ', 'rhrrrrr', 'rrrrrrr', ' rrrrr ', '  rrr  ', '   r   '],
 }

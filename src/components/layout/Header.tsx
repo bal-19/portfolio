@@ -38,7 +38,7 @@ export function Header() {
       style={{
         backdropFilter: 'blur(8px)',
         WebkitBackdropFilter: 'blur(8px)',
-        background: 'linear-gradient(var(--ore-bg), rgba(17,17,17,0.55))',
+        background: 'linear-gradient(var(--ore-bg), var(--ore-bg-fade))',
       }}
     >
       <div className="mx-auto flex max-w-container items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-10">

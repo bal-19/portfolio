@@ -1,9 +1,11 @@
 import type { CSSProperties } from 'react'
 
+// Ender-portal motes drifting through the void.
 const COLORS = [
+  'var(--end-magenta)',
+  'var(--end-purpur)',
+  'var(--end-star)',
   'var(--ore-green-bright)',
-  'var(--ore-blue-bright)',
-  'var(--ore-gold-bright)',
 ]
 
 // Deterministic ambient "pixel dust" drifting up behind the content. Sits in the

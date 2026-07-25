@@ -7,7 +7,8 @@
 :root {
   /* ── Base surfaces (near-black → panel) ── */
   --ore-black: #0d0d0e;
-  --ore-bg: #111111;
+  --ore-bg: #0d0913;
+  --ore-bg-fade: rgba(13, 9, 19, 0.55);
   --ore-bg-raised: #191a1c;
   --ore-surface: #23232a;
   --ore-surface-2: #2b2c32;
@@ -63,6 +64,18 @@
   --ore-tooltip-bg: rgba(18, 8, 24, 0.96);
   --ore-tooltip-border: #4a2c8f;
 
+  /* ── The End dimension (backdrop atmosphere only — panel surfaces and the
+     green/blue/gold action accents stay as they are) ── */
+  --end-void: #0b0711;
+  --end-haze: rgba(123, 63, 160, 0.24);
+  --end-haze-2: rgba(180, 92, 240, 0.14);
+  --end-haze-3: rgba(167, 121, 167, 0.1);
+  --end-star: #cfc6e8;
+  --end-purpur: #a779a7;
+  --end-stone: #dcdfa4;
+  --end-stone-dim: #9fa274;
+  --end-magenta: #d264ff;
+
   /* ── Contribution blocks (light = top/left bevel, dark = bottom/right) ──
      Level 0 reuses --ore-surface / --ore-border-dim as an empty slot. */
   --block-iron: #d8d8d8;
@@ -85,7 +98,8 @@
   /* ── Typography ── */
   --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-mono:
+    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   --fs-h2: 32px;
   --lh-h2: 1.08;
@@ -100,25 +114,39 @@
   --radius-slot: 6px;
 
   /* ── Effects: bevels (raised faces) ── */
-  --bevel-neutral: inset 0 2px 0 0 rgba(255, 255, 255, 0.1), 0 4px 0 0 var(--ore-bevel-light);
-  --bevel-neutral-pressed: inset 0 2px 0 0 rgba(255, 255, 255, 0.08), 0 1px 0 0 var(--ore-bevel-light);
-  --bevel-green: inset 0 2px 0 0 var(--ore-green-bright), 0 5px 0 0 var(--ore-green-shadow);
-  --bevel-green-pressed: inset 0 2px 0 0 var(--ore-green-bright), 0 1px 0 0 var(--ore-green-shadow);
-  --bevel-blue: inset 0 2px 0 0 var(--ore-blue-bright), 0 5px 0 0 var(--ore-blue-shadow);
-  --bevel-gold: inset 0 2px 0 0 var(--ore-gold-bright), 0 5px 0 0 var(--ore-gold-shadow);
-  --bevel-red: inset 0 2px 0 0 var(--ore-red-bright), 0 5px 0 0 var(--ore-red-shadow);
+  --bevel-neutral:
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.1), 0 4px 0 0 var(--ore-bevel-light);
+  --bevel-neutral-pressed:
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.08), 0 1px 0 0 var(--ore-bevel-light);
+  --bevel-green:
+    inset 0 2px 0 0 var(--ore-green-bright), 0 5px 0 0 var(--ore-green-shadow);
+  --bevel-green-pressed:
+    inset 0 2px 0 0 var(--ore-green-bright), 0 1px 0 0 var(--ore-green-shadow);
+  --bevel-blue:
+    inset 0 2px 0 0 var(--ore-blue-bright), 0 5px 0 0 var(--ore-blue-shadow);
+  --bevel-gold:
+    inset 0 2px 0 0 var(--ore-gold-bright), 0 5px 0 0 var(--ore-gold-shadow);
+  --bevel-red:
+    inset 0 2px 0 0 var(--ore-red-bright), 0 5px 0 0 var(--ore-red-shadow);
 
   /* ── Effects: inset wells ── */
-  --inset-well: inset 0 2px 4px 0 rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(0, 0, 0, 0.35);
-  --inset-slot: inset 0 2px 0 0 rgba(0, 0, 0, 0.45), inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
+  --inset-well:
+    inset 0 2px 4px 0 rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+  --inset-slot:
+    inset 0 2px 0 0 rgba(0, 0, 0, 0.45),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.04);
 
   /* ── Effects: panel elevation ── */
-  --shadow-panel: 0 2px 0 0 rgba(0, 0, 0, 0.6), 0 8px 24px -8px rgba(0, 0, 0, 0.7);
-  --shadow-float: 0 4px 0 0 rgba(0, 0, 0, 0.55), 0 16px 40px -12px rgba(0, 0, 0, 0.8);
+  --shadow-panel:
+    0 2px 0 0 rgba(0, 0, 0, 0.6), 0 8px 24px -8px rgba(0, 0, 0, 0.7);
+  --shadow-float:
+    0 4px 0 0 rgba(0, 0, 0, 0.55), 0 16px 40px -12px rgba(0, 0, 0, 0.8);
 
   /* ── Effects: focus / hover glow ── */
-  --glow-blue: 0 0 0 2px var(--ore-blue-bright), 0 0 18px 0 var(--ore-blue-glow);
-  --glow-green: 0 0 0 2px var(--ore-green-bright), 0 0 18px 0 rgba(117, 183, 93, 0.45);
+  --glow-blue:
+    0 0 0 2px var(--ore-blue-bright), 0 0 18px 0 var(--ore-blue-glow);
+  --glow-green:
+    0 0 0 2px var(--ore-green-bright), 0 0 18px 0 rgba(117, 183, 93, 0.45);
 
   /* ── Motion ── */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -133,7 +161,7 @@ html {
 }
 
 body {
-  @apply bg-ore-bg text-ore-text font-body antialiased;
+  @apply bg-ore-bg font-body text-ore-text antialiased;
 }
 
 a {
@@ -288,6 +316,21 @@ a:hover {
   animation: glintSweep 4.2s ease-in-out infinite;
 }
 
+/* ── The End: void stars ── */
+@keyframes voidTwinkle {
+  0%,
+  100% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.anim-void-star {
+  animation: voidTwinkle 4.5s ease-in-out infinite;
+}
+
 /* ── Game chrome: selection, focus ring, scrollbar ── */
 ::selection {
   background: var(--ore-green-face);
@@ -323,7 +366,8 @@ a:hover {
   .anim-item,
   .anim-shadow,
   .anim-particle,
-  .anim-splash {
+  .anim-splash,
+  .anim-void-star {
     animation: none;
   }
   .enchant-glint::after {

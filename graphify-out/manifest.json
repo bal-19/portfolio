@@ -25,14 +25,14 @@
     "semantic_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0"
   },
   "src/App.tsx": {
-    "mtime": 1784948869.5310752,
+    "mtime": 1784952723.4412186,
     "ast_hash": "b8f86b8858793311b1bb32b10626a88e",
     "semantic_hash": ""
   },
   "src/components/layout/AmbientParticles.tsx": {
-    "mtime": 1784910204.5393713,
-    "ast_hash": "b322af05b3abb375b3ba7f45e0056b80",
-    "semantic_hash": "b322af05b3abb375b3ba7f45e0056b80"
+    "mtime": 1784951263.067437,
+    "ast_hash": "1d994dd372f092547b82da7ffad71269",
+    "semantic_hash": ""
   },
   "src/components/layout/Footer.tsx": {
     "mtime": 1784910255.3458006,
@@ -40,19 +40,19 @@
     "semantic_hash": "112de283cbadb7679828ec61ce0e4a34"
   },
   "src/components/layout/Header.tsx": {
-    "mtime": 1784909581.9710777,
-    "ast_hash": "2aaf7155874e93a6d0ac52f8e59927b0",
-    "semantic_hash": "2aaf7155874e93a6d0ac52f8e59927b0"
+    "mtime": 1784951268.8389826,
+    "ast_hash": "f69944cb95705893b060cca22eee5f41",
+    "semantic_hash": ""
   },
   "src/components/layout/HudBackdrop.tsx": {
-    "mtime": 1784910976.636004,
-    "ast_hash": "b4206969ba83cfe432abdc300acf5d43",
-    "semantic_hash": "b4206969ba83cfe432abdc300acf5d43"
+    "mtime": 1784951257.6945589,
+    "ast_hash": "6fe7274ead003402e6de3e4feb1d3f9b",
+    "semantic_hash": ""
   },
   "src/components/layout/WorldStrata.tsx": {
-    "mtime": 1784910906.723564,
-    "ast_hash": "5ec4f12a4ffa1681ffe32128a778deba",
-    "semantic_hash": "5ec4f12a4ffa1681ffe32128a778deba"
+    "mtime": 1784951296.4998534,
+    "ast_hash": "5d5d9bba0f1a92cfbd7d408e99932d59",
+    "semantic_hash": ""
   },
   "src/components/layout/XpScrollBar.tsx": {
     "mtime": 1784911159.1392176,
@@ -115,9 +115,9 @@
     "semantic_hash": "c8188252facb36e52f319a93a9cb74de"
   },
   "src/components/ui/mobs.ts": {
-    "mtime": 1784910928.5471587,
-    "ast_hash": "35b3a0da8ab91b3b917b1dd090d2bc5a",
-    "semantic_hash": "35b3a0da8ab91b3b917b1dd090d2bc5a"
+    "mtime": 1784952743.066708,
+    "ast_hash": "51c437c05ea6eb3ff32576d7180a6563",
+    "semantic_hash": ""
   },
   "src/data/experience.ts": {
     "mtime": 1784948298.7976468,
