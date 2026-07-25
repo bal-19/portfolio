@@ -101,5 +101,7 @@ export const id: Dictionary = {
   },
   footer: {
     note: '© 2026 · Dibuat dengan Oreframe design system',
+    credit3d: 'Latar 3D',
+    creditBy: 'oleh',
   },
 }

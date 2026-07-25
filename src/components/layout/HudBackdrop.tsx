@@ -16,7 +16,7 @@ export function HudBackdrop() {
         style={{
           position: 'fixed',
           inset: 0,
-          zIndex: -3,
+          zIndex: -6,
           background: [
             'radial-gradient(900px 620px at 18% -6%, var(--end-haze), transparent 60%)',
             'radial-gradient(760px 540px at 84% 4%, var(--end-haze-2), transparent 62%)',
@@ -31,7 +31,7 @@ export function HudBackdrop() {
         style={{
           position: 'fixed',
           inset: 0,
-          zIndex: -2,
+          zIndex: -5,
           pointerEvents: 'none',
           overflow: 'hidden',
         }}
@@ -59,7 +59,7 @@ export function HudBackdrop() {
         style={{
           position: 'fixed',
           inset: 0,
-          zIndex: -1,
+          zIndex: -2,
           pointerEvents: 'none',
           opacity: 0.4,
           backgroundImage:

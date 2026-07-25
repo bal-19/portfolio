@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
+import { scrollProgress } from '@/lib/scrollProgress'
 
 const NAV_OFFSET = -80
 
@@ -14,6 +15,16 @@ export function useSmoothScroll() {
       raf = requestAnimationFrame(loop)
     }
     raf = requestAnimationFrame(loop)
+
+    // Publish progress for the 3D backdrop. This is the project's only Lenis
+    // instance — the scene reads from it rather than starting a second one.
+    const onScroll = () => {
+      const p = lenis.progress
+      scrollProgress.current = Number.isFinite(p)
+        ? Math.min(Math.max(p, 0), 1)
+        : 0
+    }
+    lenis.on('scroll', onScroll)
 
     const onClick = (e: MouseEvent) => {
       const anchor = (e.target as HTMLElement).closest<HTMLAnchorElement>(
@@ -31,7 +42,9 @@ export function useSmoothScroll() {
     return () => {
       cancelAnimationFrame(raf)
       document.removeEventListener('click', onClick)
+      lenis.off('scroll', onScroll)
       lenis.destroy()
+      scrollProgress.current = 0
     }
   }, [])
 }

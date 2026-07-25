@@ -15,9 +15,9 @@
     "semantic_hash": "69533a9e28b99b06be1f1b547d52eb39"
   },
   "package.json": {
-    "mtime": 1784908159.433554,
-    "ast_hash": "1650c65488848a9e02842798d890833c",
-    "semantic_hash": "1650c65488848a9e02842798d890833c"
+    "mtime": 1784959671.081172,
+    "ast_hash": "9d8d36c6062b1e6f41be050252b82e1a",
+    "semantic_hash": ""
   },
   "postcss.config.js": {
     "mtime": 1784905904.0934644,
@@ -25,8 +25,8 @@
     "semantic_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0"
   },
   "src/App.tsx": {
-    "mtime": 1784952723.4412186,
-    "ast_hash": "b8f86b8858793311b1bb32b10626a88e",
+    "mtime": 1784961410.2907662,
+    "ast_hash": "f3fa72eb99528fd6ff4e4fcdffedf6f6",
     "semantic_hash": ""
   },
   "src/components/layout/AmbientParticles.tsx": {
@@ -35,9 +35,9 @@
     "semantic_hash": ""
   },
   "src/components/layout/Footer.tsx": {
-    "mtime": 1784910255.3458006,
-    "ast_hash": "112de283cbadb7679828ec61ce0e4a34",
-    "semantic_hash": "112de283cbadb7679828ec61ce0e4a34"
+    "mtime": 1784958621.5576773,
+    "ast_hash": "ff54ed8e29c45f818900909e62691574",
+    "semantic_hash": ""
   },
   "src/components/layout/Header.tsx": {
     "mtime": 1784951268.8389826,
@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "src/components/layout/HudBackdrop.tsx": {
-    "mtime": 1784951257.6945589,
-    "ast_hash": "6fe7274ead003402e6de3e4feb1d3f9b",
+    "mtime": 1784958576.1800969,
+    "ast_hash": "2592744005d1eb1f3eec4621ffb85863",
     "semantic_hash": ""
   },
   "src/components/layout/WorldStrata.tsx": {
@@ -65,9 +65,9 @@
     "semantic_hash": "6e96e722611bb3919daf57752f2787f1"
   },
   "src/components/ui/Button.tsx": {
-    "mtime": 1784907445.4925928,
-    "ast_hash": "046b921e01c68c31f0e64c69d496daea",
-    "semantic_hash": "046b921e01c68c31f0e64c69d496daea"
+    "mtime": 1784958747.294219,
+    "ast_hash": "8c5e91942c4e897770289a3de93d2964",
+    "semantic_hash": ""
   },
   "src/components/ui/Icon.tsx": {
     "mtime": 1784907427.9422166,
@@ -140,9 +140,9 @@
     "semantic_hash": "ddbfc996b439fc24f54f032b5b577920"
   },
   "src/hooks/useSmoothScroll.ts": {
-    "mtime": 1784907701.6538615,
-    "ast_hash": "d9b4aa4eda8faf214afdcd8e41ae8656",
-    "semantic_hash": "d9b4aa4eda8faf214afdcd8e41ae8656"
+    "mtime": 1784959113.062143,
+    "ast_hash": "e6fafbe3eca70e44e1a175ba6b0618ce",
+    "semantic_hash": ""
   },
   "src/i18n/LangContext.tsx": {
     "mtime": 1784948316.4790163,
@@ -150,18 +150,18 @@
     "semantic_hash": ""
   },
   "src/i18n/en.ts": {
-    "mtime": 1784948774.8582816,
-    "ast_hash": "603a28c5bb26fd2316d3a8e6948efe9e",
+    "mtime": 1784958592.2505906,
+    "ast_hash": "c6611cce707849b6b6cbc31e0a218f71",
     "semantic_hash": ""
   },
   "src/i18n/id.ts": {
-    "mtime": 1784948770.1221974,
-    "ast_hash": "a58e400f1a8b92aa88e7f3315e860a38",
+    "mtime": 1784958586.3329508,
+    "ast_hash": "0164c296c4af36652f6679a7a01a054e",
     "semantic_hash": ""
   },
   "src/i18n/types.ts": {
-    "mtime": 1784948764.5356991,
-    "ast_hash": "89bbf255d4733c877c39aecf713baf92",
+    "mtime": 1784958581.9611018,
+    "ast_hash": "2078561d0b853a06ffe91eb19f50d33b",
     "semantic_hash": ""
   },
   "src/lib/cn.ts": {
@@ -225,9 +225,9 @@
     "semantic_hash": "f9cb81ddcea69ffdab672fc8c48dca66"
   },
   "vite.config.ts": {
-    "mtime": 1784908277.6903996,
-    "ast_hash": "4470f16fd3b493080820664bd58c2457",
-    "semantic_hash": "4470f16fd3b493080820664bd58c2457"
+    "mtime": 1784958625.8125288,
+    "ast_hash": "3d8950ba97412f84f93e54101f8c039c",
+    "semantic_hash": ""
   },
   "CLAUDE.md": {
     "mtime": 1784948152.707538,
@@ -292,6 +292,41 @@
   ".github/workflows/update-stats.yml": {
     "mtime": 1784949963.6197188,
     "ast_hash": "0dae3ee918cc0c51fb1623e71fd05700",
+    "semantic_hash": ""
+  },
+  "public/draco/draco_decoder.js": {
+    "mtime": 1784958411.4184623,
+    "ast_hash": "5fcad04db3893d9fbb79418b1f8e44a1",
+    "semantic_hash": ""
+  },
+  "public/draco/draco_wasm_wrapper.js": {
+    "mtime": 1784958411.4380152,
+    "ast_hash": "7a48a3fdc5785631621f4b20cd0937dc",
+    "semantic_hash": ""
+  },
+  "src/components/layout/EndScene.tsx": {
+    "mtime": 1784961385.7174344,
+    "ast_hash": "517a684b57f593d103463d7c15960593",
+    "semantic_hash": ""
+  },
+  "src/lib/scrollProgress.ts": {
+    "mtime": 1784958495.6614354,
+    "ast_hash": "4658499c62554688af09b082cbf5c2c8",
+    "semantic_hash": ""
+  },
+  "public/models/the-end/license.txt": {
+    "mtime": 1784958411.5487063,
+    "ast_hash": "0cf37b8ba3d12bb083045eb7e6a3bd60",
+    "semantic_hash": ""
+  },
+  "public/models/the-end/textures/Bedrock_baseColor.webp": {
+    "mtime": 1784958382.4365175,
+    "ast_hash": "c1a221c5a3938020ea002502e96e97e0",
+    "semantic_hash": ""
+  },
+  "public/models/the-end/textures/Fire_baseColor.webp": {
+    "mtime": 1784958382.4365175,
+    "ast_hash": "35b5239921b0773f00b9603a425a00f8",
     "semantic_hash": ""
   }
 }

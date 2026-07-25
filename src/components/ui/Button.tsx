@@ -1,12 +1,11 @@
-import {
-  useState,
-  type CSSProperties,
-  type ElementType,
-  type ReactNode,
-} from 'react'
+import { useState, type CSSProperties, type ReactNode } from 'react'
 
 type ButtonColor = 'green' | 'blue' | 'gold' | 'red' | 'neutral'
 type ButtonSize = 'sm' | 'md' | 'lg'
+/** Narrow on purpose: a bare `ElementType` widens to every intrinsic element —
+ *  including the three.js ones R3F adds to JSX — which collapses the rendered
+ *  props to `never`. */
+type ButtonTag = 'button' | 'a' | 'span' | 'div'
 
 const FACE: Record<
   ButtonColor,
@@ -60,7 +59,7 @@ interface ButtonProps {
   icon?: ReactNode
   iconRight?: ReactNode
   disabled?: boolean
-  as?: ElementType
+  as?: ButtonTag
   href?: string
   onClick?: () => void
   title?: string
@@ -84,7 +83,7 @@ export function Button({
   const [hover, setHover] = useState(false)
   const f = FACE[color]
   const s = SIZE[size]
-  const Tag: ElementType = as ?? (href ? 'a' : 'button')
+  const Tag: ButtonTag = as ?? (href ? 'a' : 'button')
 
   const base: CSSProperties = {
     display: 'inline-flex',

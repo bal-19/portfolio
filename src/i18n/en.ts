@@ -101,5 +101,7 @@ export const en: Dictionary = {
   },
   footer: {
     note: '© 2026 · Built with the Oreframe design system',
+    credit3d: '3D background',
+    creditBy: 'by',
   },
 }

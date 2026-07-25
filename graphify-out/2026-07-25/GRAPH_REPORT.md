@@ -1,16 +1,16 @@
 # Graph Report - new-portfolio  (2026-07-25)
 
 ## Corpus Check
-- 57 files · ~15,495 words
+- 60 files · ~51,837 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 370 nodes · 339 edges · 57 communities (35 shown, 22 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
+- 534 nodes · 631 edges · 67 communities (42 shown, 25 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.67)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5f6015c7`
+- Built from commit: `8236cdcc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -45,6 +45,7 @@
 - Root tsconfig
 - Design Docs: HUD Hearts/StatCell
 - Design Docs: PixelDivider/WorldStrata
+- App Entry
 - HudBackdrop Layout
 - Design Docs: Badge
 - Design Docs: Chrome/Game Feel
@@ -59,19 +60,29 @@
 - contributions.ts
 - GithubActivity.tsx
 - fetch-github-stats.mjs
-- EnderDragon.tsx
+- draco_decoder.js
+- getCache
+- A
+- ExceptionInfo
+- getBinary
+- EndScene.tsx
+- callRuntimeCallbacks
+- emscripten_realloc_buffer
+- intArrayFromString
+- wrapPointer
+- scrollProgress.ts
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 20 edges
-2. `Design System — "Oreframe" Developer Portfolio` - 16 edges
-3. `compilerOptions` - 15 edges
-4. `CLAUDE.md — Developer Portfolio (Vite + React)` - 8 edges
-5. `scripts` - 6 edges
-6. `Dictionary` - 5 edges
-7. `Tech Stack` - 5 edges
-8. `Motion` - 4 edges
-9. `Project Folder Structure Convention` - 4 edges
-10. `Effects: Bevel / Shadow / Glow Tokens` - 4 edges
+1. `getCache()` - 21 edges
+2. `A()` - 20 edges
+3. `compilerOptions` - 20 edges
+4. `w()` - 19 edges
+5. `l()` - 17 edges
+6. `ExceptionInfo()` - 16 edges
+7. `Design System — "Oreframe" Developer Portfolio` - 16 edges
+8. `compilerOptions` - 15 edges
+9. `q()` - 8 edges
+10. `CLAUDE.md — Developer Portfolio (Vite + React)` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `favicon.svg — Rounded-square icon with blue zigzag glyph` --conceptually_related_to--> `Iconography (no logo, Simple Icons CDN, HUD glyphs)`  [INFERRED]
@@ -92,15 +103,15 @@
 - **Game Flourishes Feature Set** — docs_design_system_xpscrollbar, docs_design_system_splash_text, docs_design_system_item_tooltip, docs_design_system_enchant_glint, docs_design_system_world_strata, docs_design_system_pixeldivider, docs_design_system_pixel_mobs, docs_design_system_hud_hearts, docs_design_system_chrome_game [EXTRACTED 1.00]
 - **src/components/ui Component Library** — docs_design_system_button_component, docs_design_system_badge_component, docs_design_system_panel_component, docs_design_system_statcell_component, docs_design_system_inventoryslot_component, docs_design_system_sectionheader_component, docs_design_system_icon_component, docs_design_system_reveal_component [EXTRACTED 1.00]
 
-## Communities (57 total, 22 thin omitted)
+## Communities (67 total, 25 thin omitted)
 
 ### Community 0 - "Dev Tooling & Dependencies"
 Cohesion: 0.05
-Nodes (37): autoprefixer, eslint, eslint-config-prettier, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, devDependencies (+29 more)
+Nodes (39): autoprefixer, eslint, eslint-config-prettier, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, devDependencies (+31 more)
 
 ### Community 1 - "Docs & Design-System Spec"
-Cohesion: 0.07
-Nodes (33): CLAUDE.md — Developer Portfolio (Vite + React), Commands, Do, Do / Don't Rules, Don't, graphify, Konvensi Kode, CLAUDE.md — Developer Portfolio Instructions (+25 more)
+Cohesion: 0.05
+Nodes (43): CLAUDE.md — Developer Portfolio (Vite + React), Code Conventions (naming, exports, props, path alias), Commands, Do, Do / Don't Rules, Don't, Project Folder Structure Convention, graphify (+35 more)
 
 ### Community 2 - "App tsconfig"
 Cohesion: 0.08
@@ -111,16 +122,16 @@ Cohesion: 0.11
 Nodes (19): en, id, Lang, LangContext, LangContextValue, LangProviderProps, AboutDict, ContactDict (+11 more)
 
 ### Community 4 - "Runtime Deps & Package Meta"
-Cohesion: 0.08
-Nodes (22): clsx, lenis, motion, dependencies, clsx, lenis, motion, react (+14 more)
+Cohesion: 0.07
+Nodes (28): clsx, lenis, motion, dependencies, clsx, lenis, motion, react (+20 more)
 
 ### Community 5 - "Node tsconfig"
 Cohesion: 0.10
 Nodes (19): node, vite.config.ts, compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib, module, moduleDetection (+11 more)
 
 ### Community 6 - "Pixel Mobs & Sprites"
-Cohesion: 0.13
-Nodes (15): BLOCK, DRAGON_DOWN, DRAGON_PALETTE, DRAGON_UP, EMERALD, HEART, MobDef, SLIME (+7 more)
+Cohesion: 0.17
+Nodes (12): BLOCK, EMERALD, HEART, MobDef, SLIME, SPIRIT, ANIM, DEFS (+4 more)
 
 ### Community 7 - "WorldStrata Decoration"
 Cohesion: 0.22
@@ -135,8 +146,8 @@ Cohesion: 0.29
 Nodes (6): plugins, printWidth, semi, singleQuote, trailingComma, prettier-plugin-tailwindcss
 
 ### Community 10 - "Button Component"
-Cohesion: 0.29
-Nodes (5): ButtonColor, ButtonProps, ButtonSize, FACE, SIZE
+Cohesion: 0.25
+Nodes (6): ButtonColor, ButtonProps, ButtonSize, ButtonTag, FACE, SIZE
 
 ### Community 11 - "Projects Data"
 Cohesion: 0.25
@@ -167,8 +178,8 @@ Cohesion: 0.40
 Nodes (4): experience, JobCopy, JobCopyByLang, JobMeta
 
 ### Community 50 - "Project Folder Structure Convention"
-Cohesion: 0.20
-Nodes (10): Code Conventions (naming, exports, props, path alias), Project Folder Structure Convention, Bevel Motif (raised surface / concave well), Button Component, Effects: Bevel / Shadow / Glow Tokens, Enchant Glint Flourish, Footer Layout (contact panel + social + footer bar), Header Layout (nav + lang toggle + Contact button) (+2 more)
+Cohesion: 0.11
+Nodes (24): B(), C(), D(), E(), f(), G(), H(), I() (+16 more)
 
 ### Community 51 - "contributions.ts"
 Cohesion: 0.28
@@ -186,25 +197,57 @@ Nodes (6): BLOCK_LEVELS, BLOCK_TIERS, BlockLevel, BlockTier, ContributionDay, Ra
 Cohesion: 0.25
 Nodes (5): counts, days, [q1, q2, q3], result, sorted
 
+### Community 56 - "draco_decoder.js"
+Cohesion: 0.08
+Nodes (6): addRunDependency(), createWasm(), l(), p(), UTF8ArrayToString(), UTF8ToString()
+
+### Community 57 - "getCache"
+Cohesion: 0.10
+Nodes (20): AttributeOctahedronTransform(), AttributeQuantizationTransform(), AttributeTransformData(), Decoder(), DecoderBuffer(), destroy(), DracoFloat32Array(), DracoInt16Array() (+12 more)
+
+### Community 58 - "A"
+Cohesion: 0.17
+Nodes (3): c(), ha(), A()
+
+### Community 60 - "getBinary"
+Cohesion: 0.25
+Nodes (8): abort(), assert(), getBinary(), getBinaryPromise(), intArrayFromBase64(), isDataURI(), isFileURI(), tryParseAsDataURI()
+
+### Community 61 - "EndScene.tsx"
+Cohesion: 0.32
+Nodes (4): EndScene(), isLowPower(), ModelProps, reducedMotion()
+
+### Community 62 - "callRuntimeCallbacks"
+Cohesion: 0.29
+Nodes (7): addOnPostRun(), addOnPreRun(), callRuntimeCallbacks(), initRuntime(), postRun(), preRun(), run()
+
+### Community 63 - "emscripten_realloc_buffer"
+Cohesion: 0.50
+Nodes (4): emscripten_realloc_buffer(), _emscripten_resize_heap(), getHeapMax(), updateMemoryViews()
+
+### Community 64 - "intArrayFromString"
+Cohesion: 0.50
+Nodes (4): ensureString(), intArrayFromString(), lengthBytesUTF8(), stringToUTF8Array()
+
 ## Knowledge Gaps
-- **208 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+203 more)
+- **212 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+207 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **22 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `devDependencies` connect `Dev Tooling & Dependencies` to `Runtime Deps & Package Meta`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
-- **Why does `Design System — "Oreframe" Developer Portfolio` connect `Docs & Design-System Spec` to `Project Folder Structure Convention`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `c()` connect `A` to `draco_decoder.js`, `Project Folder Structure Convention`?**
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+- **Why does `A()` connect `A` to `Project Folder Structure Convention`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `q()` connect `Project Folder Structure Convention` to `A`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Are the 3 inferred relationships involving `A()` (e.g. with `c()` and `.settleSameAsThenable_()`) actually correct?**
+  _`A()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `semi`, `singleQuote`, `trailingComma` to the rest of the system?**
-  _208 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _212 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Dev Tooling & Dependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Docs & Design-System Spec` be split into smaller, more focused modules?**
-  _Cohesion score 0.06507936507936508 - nodes in this community are weakly interconnected._
-- **Should `App tsconfig` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
-- **Should `i18n Types & Context` be split into smaller, more focused modules?**
-  _Cohesion score 0.11231884057971014 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.050241545893719805 - nodes in this community are weakly interconnected._

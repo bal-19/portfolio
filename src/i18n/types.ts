@@ -87,6 +87,9 @@ export interface ContactDict {
 
 export interface FooterDict {
   note: string
+  /** CC-BY-4.0 attribution for the 3D backdrop — required by the model licence. */
+  credit3d: string
+  creditBy: string
 }
 
 export interface Dictionary {
