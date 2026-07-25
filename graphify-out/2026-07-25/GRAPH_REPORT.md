@@ -1,11 +1,11 @@
 # Graph Report - new-portfolio  (2026-07-25)
 
 ## Corpus Check
-- 60 files · ~51,837 words
+- 60 files · ~52,185 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 534 nodes · 631 edges · 67 communities (42 shown, 25 thin omitted)
+- 539 nodes · 636 edges · 68 communities (42 shown, 26 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.67)
 - Token cost: 0 input · 0 output
 
@@ -71,6 +71,7 @@
 - intArrayFromString
 - wrapPointer
 - scrollProgress.ts
+- ha
 
 ## God Nodes (most connected - your core abstractions)
 1. `getCache()` - 21 edges
@@ -103,7 +104,7 @@
 - **Game Flourishes Feature Set** — docs_design_system_xpscrollbar, docs_design_system_splash_text, docs_design_system_item_tooltip, docs_design_system_enchant_glint, docs_design_system_world_strata, docs_design_system_pixeldivider, docs_design_system_pixel_mobs, docs_design_system_hud_hearts, docs_design_system_chrome_game [EXTRACTED 1.00]
 - **src/components/ui Component Library** — docs_design_system_button_component, docs_design_system_badge_component, docs_design_system_panel_component, docs_design_system_statcell_component, docs_design_system_inventoryslot_component, docs_design_system_sectionheader_component, docs_design_system_icon_component, docs_design_system_reveal_component [EXTRACTED 1.00]
 
-## Communities (67 total, 25 thin omitted)
+## Communities (68 total, 26 thin omitted)
 
 ### Community 0 - "Dev Tooling & Dependencies"
 Cohesion: 0.05
@@ -122,8 +123,8 @@ Cohesion: 0.11
 Nodes (19): en, id, Lang, LangContext, LangContextValue, LangProviderProps, AboutDict, ContactDict (+11 more)
 
 ### Community 4 - "Runtime Deps & Package Meta"
-Cohesion: 0.07
-Nodes (28): clsx, lenis, motion, dependencies, clsx, lenis, motion, react (+20 more)
+Cohesion: 0.06
+Nodes (32): clsx, lenis, motion, dependencies, clsx, lenis, motion, postprocessing (+24 more)
 
 ### Community 5 - "Node tsconfig"
 Cohesion: 0.10
@@ -198,24 +199,20 @@ Cohesion: 0.25
 Nodes (5): counts, days, [q1, q2, q3], result, sorted
 
 ### Community 56 - "draco_decoder.js"
-Cohesion: 0.08
-Nodes (6): addRunDependency(), createWasm(), l(), p(), UTF8ArrayToString(), UTF8ToString()
+Cohesion: 0.09
+Nodes (4): addRunDependency(), createWasm(), UTF8ArrayToString(), UTF8ToString()
 
 ### Community 57 - "getCache"
 Cohesion: 0.10
 Nodes (20): AttributeOctahedronTransform(), AttributeQuantizationTransform(), AttributeTransformData(), Decoder(), DecoderBuffer(), destroy(), DracoFloat32Array(), DracoInt16Array() (+12 more)
-
-### Community 58 - "A"
-Cohesion: 0.17
-Nodes (3): c(), ha(), A()
 
 ### Community 60 - "getBinary"
 Cohesion: 0.25
 Nodes (8): abort(), assert(), getBinary(), getBinaryPromise(), intArrayFromBase64(), isDataURI(), isFileURI(), tryParseAsDataURI()
 
 ### Community 61 - "EndScene.tsx"
-Cohesion: 0.32
-Nodes (4): EndScene(), isLowPower(), ModelProps, reducedMotion()
+Cohesion: 0.28
+Nodes (5): EndScene(), FOCUS_POINT, isLowPower(), ModelProps, reducedMotion()
 
 ### Community 62 - "callRuntimeCallbacks"
 Cohesion: 0.29
@@ -229,24 +226,28 @@ Nodes (4): emscripten_realloc_buffer(), _emscripten_resize_heap(), getHeapMax(),
 Cohesion: 0.50
 Nodes (4): ensureString(), intArrayFromString(), lengthBytesUTF8(), stringToUTF8Array()
 
+### Community 67 - "ha"
+Cohesion: 0.67
+Nodes (3): ha(), l(), p()
+
 ## Knowledge Gaps
-- **212 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+207 more)
+- **215 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+210 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `c()` connect `A` to `draco_decoder.js`, `Project Folder Structure Convention`?**
+- **Why does `c()` connect `A` to `draco_decoder.js`, `Project Folder Structure Convention`, `ha`?**
   _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Why does `A()` connect `A` to `Project Folder Structure Convention`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `q()` connect `Project Folder Structure Convention` to `A`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `A()` (e.g. with `c()` and `.settleSameAsThenable_()`) actually correct?**
   _`A()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `semi`, `singleQuote`, `trailingComma` to the rest of the system?**
-  _212 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _215 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Dev Tooling & Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Docs & Design-System Spec` be split into smaller, more focused modules?**

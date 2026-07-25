@@ -15,8 +15,8 @@
     "semantic_hash": "69533a9e28b99b06be1f1b547d52eb39"
   },
   "package.json": {
-    "mtime": 1784958171.7001317,
-    "ast_hash": "8c7ff1adc20af5168bd00423631e4229",
+    "mtime": 1784959671.081172,
+    "ast_hash": "9d8d36c6062b1e6f41be050252b82e1a",
     "semantic_hash": ""
   },
   "postcss.config.js": {
@@ -25,8 +25,8 @@
     "semantic_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0"
   },
   "src/App.tsx": {
-    "mtime": 1784958555.9444685,
-    "ast_hash": "0dc059eff93e300416c51f24eeb7e333",
+    "mtime": 1784961410.2907662,
+    "ast_hash": "f3fa72eb99528fd6ff4e4fcdffedf6f6",
     "semantic_hash": ""
   },
   "src/components/layout/AmbientParticles.tsx": {
@@ -305,8 +305,8 @@
     "semantic_hash": ""
   },
   "src/components/layout/EndScene.tsx": {
-    "mtime": 1784958541.3956954,
-    "ast_hash": "c729fb9df534034ce9c5f0ee3ac0c2d6",
+    "mtime": 1784961385.7174344,
+    "ast_hash": "517a684b57f593d103463d7c15960593",
     "semantic_hash": ""
   },
   "src/lib/scrollProgress.ts": {
@@ -319,11 +319,6 @@
     "ast_hash": "0cf37b8ba3d12bb083045eb7e6a3bd60",
     "semantic_hash": ""
   },
-  "src/assets/models/the-end/license.txt": {
-    "mtime": 1717486316.0,
-    "ast_hash": "0cf37b8ba3d12bb083045eb7e6a3bd60",
-    "semantic_hash": ""
-  },
   "public/models/the-end/textures/Bedrock_baseColor.webp": {
     "mtime": 1784958382.4365175,
     "ast_hash": "c1a221c5a3938020ea002502e96e97e0",
@@ -332,16 +327,6 @@
   "public/models/the-end/textures/Fire_baseColor.webp": {
     "mtime": 1784958382.4365175,
     "ast_hash": "35b5239921b0773f00b9603a425a00f8",
-    "semantic_hash": ""
-  },
-  "src/assets/models/the-end/textures/Bedrock_baseColor.png": {
-    "mtime": 1717486318.0,
-    "ast_hash": "feaf48c78179d7dcbefa2d9acc41421a",
-    "semantic_hash": ""
-  },
-  "src/assets/models/the-end/textures/Fire_baseColor.png": {
-    "mtime": 1717486320.0,
-    "ast_hash": "3a91b74ea5e82fcea4299051a8417403",
     "semantic_hash": ""
   }
 }

@@ -35,13 +35,13 @@
     "semantic_hash": ""
   },
   "src/components/layout/Footer.tsx": {
-    "mtime": 1784958621.5576773,
-    "ast_hash": "ff54ed8e29c45f818900909e62691574",
+    "mtime": 1784971870.6011624,
+    "ast_hash": "84a6e1af9240e9917abe1818fda5e60f",
     "semantic_hash": ""
   },
   "src/components/layout/Header.tsx": {
-    "mtime": 1784951268.8389826,
-    "ast_hash": "f69944cb95705893b060cca22eee5f41",
+    "mtime": 1784971843.5420315,
+    "ast_hash": "4d21f37f92df9e0e55a4970a4711b62c",
     "semantic_hash": ""
   },
   "src/components/layout/HudBackdrop.tsx": {
@@ -120,19 +120,19 @@
     "semantic_hash": ""
   },
   "src/data/experience.ts": {
-    "mtime": 1784948298.7976468,
-    "ast_hash": "31afec061a9367712f7ecd2f40cafd1f",
+    "mtime": 1784968555.1431358,
+    "ast_hash": "5320d6d61d348956d63dcbc28566800a",
     "semantic_hash": ""
   },
   "src/data/projects.ts": {
-    "mtime": 1784948291.6962354,
-    "ast_hash": "2b190ca22fc8981c146ea405b4a50c8d",
+    "mtime": 1784970444.170102,
+    "ast_hash": "e90e1ced6010514049d817d3963fb906",
     "semantic_hash": ""
   },
   "src/data/techStack.ts": {
-    "mtime": 1784911566.1188967,
-    "ast_hash": "61cd70cb0eee0a4022d7947cbe9a938c",
-    "semantic_hash": "61cd70cb0eee0a4022d7947cbe9a938c"
+    "mtime": 1784970501.7237222,
+    "ast_hash": "ce20836d93d4acbf0f1afbabfb3cc827",
+    "semantic_hash": ""
   },
   "src/hooks/useLang.ts": {
     "mtime": 1784905938.6760693,
@@ -150,18 +150,18 @@
     "semantic_hash": ""
   },
   "src/i18n/en.ts": {
-    "mtime": 1784958592.2505906,
-    "ast_hash": "c6611cce707849b6b6cbc31e0a218f71",
+    "mtime": 1784970615.6092324,
+    "ast_hash": "60e2ff082fde2aff4d4201113f5f9da6",
     "semantic_hash": ""
   },
   "src/i18n/id.ts": {
-    "mtime": 1784958586.3329508,
-    "ast_hash": "0164c296c4af36652f6679a7a01a054e",
+    "mtime": 1784970609.5388572,
+    "ast_hash": "9d2189659738a3e3389aa77480dd4679",
     "semantic_hash": ""
   },
   "src/i18n/types.ts": {
-    "mtime": 1784958581.9611018,
-    "ast_hash": "2078561d0b853a06ffe91eb19f50d33b",
+    "mtime": 1784970588.575616,
+    "ast_hash": "53ab0877306753dc02015d23984069d6",
     "semantic_hash": ""
   },
   "src/lib/cn.ts": {
@@ -175,9 +175,9 @@
     "semantic_hash": "160c31977d3d2c3bcbb232b530ddbefa"
   },
   "src/sections/About.tsx": {
-    "mtime": 1784909295.5561328,
-    "ast_hash": "ced0ef961cb4afba159b685362c4b3d4",
-    "semantic_hash": "ced0ef961cb4afba159b685362c4b3d4"
+    "mtime": 1784962276.992241,
+    "ast_hash": "187741becfccc998a3e24496a4be7629",
+    "semantic_hash": ""
   },
   "src/sections/Contact.tsx": {
     "mtime": 1784907921.4302385,
@@ -195,14 +195,14 @@
     "semantic_hash": "da6a2ebf68e22f9cdec00f393c7e19e4"
   },
   "src/sections/Projects.tsx": {
-    "mtime": 1784948332.0375736,
-    "ast_hash": "313a7f7e9e4039dd701f795f2bb2c234",
+    "mtime": 1784969154.6419828,
+    "ast_hash": "63b65d601072fbd7d29d9a01223a4eab",
     "semantic_hash": ""
   },
   "src/sections/TechStack.tsx": {
-    "mtime": 1784911051.4405065,
-    "ast_hash": "ca51a50505d453198e91a94d3aef4927",
-    "semantic_hash": "ca51a50505d453198e91a94d3aef4927"
+    "mtime": 1784969796.3148696,
+    "ast_hash": "ab1d382d243941ebde00d49c91387777",
+    "semantic_hash": ""
   },
   "tailwind.config.ts": {
     "mtime": 1784948726.7630036,
@@ -250,9 +250,9 @@
     "semantic_hash": "7d84d4ced856d0bc6e0a5a2e850374fa"
   },
   "public/favicon.svg": {
-    "mtime": 1784905885.807629,
-    "ast_hash": "74f6e9529bc935a22dc976cf6b9f862b",
-    "semantic_hash": "74f6e9529bc935a22dc976cf6b9f862b"
+    "mtime": 1784972474.3747146,
+    "ast_hash": "821704fd4e64f229aa4989fa204a2133",
+    "semantic_hash": ""
   },
   ".claude/settings.json": {
     "mtime": 1784948152.7239141,
@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "src/data/stats.json": {
-    "mtime": 1784950372.0730228,
-    "ast_hash": "d69f31b41e77c88d06947203f7997906",
+    "mtime": 1784963494.8408165,
+    "ast_hash": "c015cee011b252add636fc526040672e",
     "semantic_hash": ""
   },
   "src/lib/contributions.ts": {
@@ -305,8 +305,8 @@
     "semantic_hash": ""
   },
   "src/components/layout/EndScene.tsx": {
-    "mtime": 1784961385.7174344,
-    "ast_hash": "517a684b57f593d103463d7c15960593",
+    "mtime": 1784971453.3777878,
+    "ast_hash": "09606401face599da833391dd98974a1",
     "semantic_hash": ""
   },
   "src/lib/scrollProgress.ts": {

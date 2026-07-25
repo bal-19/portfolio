@@ -1,16 +1,16 @@
 # Graph Report - new-portfolio  (2026-07-25)
 
 ## Corpus Check
-- 60 files · ~52,185 words
+- 60 files · ~29,383 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 539 nodes · 636 edges · 68 communities (42 shown, 26 thin omitted)
+- 542 nodes · 639 edges · 68 communities (42 shown, 26 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.67)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8236cdcc`
+- Built from commit: `f8d8a8a4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -120,7 +120,7 @@ Nodes (25): DOM, src, vite/client, compilerOptions, allowArbitraryExtensions, al
 
 ### Community 3 - "i18n Types & Context"
 Cohesion: 0.11
-Nodes (19): en, id, Lang, LangContext, LangContextValue, LangProviderProps, AboutDict, ContactDict (+11 more)
+Nodes (20): en, id, Lang, LangContext, LangContextValue, LangProviderProps, AboutDict, ContactDict (+12 more)
 
 ### Community 4 - "Runtime Deps & Package Meta"
 Cohesion: 0.06
@@ -211,8 +211,8 @@ Cohesion: 0.25
 Nodes (8): abort(), assert(), getBinary(), getBinaryPromise(), intArrayFromBase64(), isDataURI(), isFileURI(), tryParseAsDataURI()
 
 ### Community 61 - "EndScene.tsx"
-Cohesion: 0.28
-Nodes (5): EndScene(), FOCUS_POINT, isLowPower(), ModelProps, reducedMotion()
+Cohesion: 0.22
+Nodes (6): EndScene(), FOCUS_POINT, isLowPower(), ModelProps, reducedMotion(), SSAO_COLOR
 
 ### Community 62 - "callRuntimeCallbacks"
 Cohesion: 0.29
@@ -231,7 +231,7 @@ Cohesion: 0.67
 Nodes (3): ha(), l(), p()
 
 ## Knowledge Gaps
-- **215 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+210 more)
+- **217 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+212 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -239,7 +239,7 @@ Nodes (3): ha(), l(), p()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `c()` connect `A` to `draco_decoder.js`, `Project Folder Structure Convention`, `ha`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **Why does `A()` connect `A` to `Project Folder Structure Convention`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `q()` connect `Project Folder Structure Convention` to `A`?**
@@ -247,7 +247,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 3 inferred relationships involving `A()` (e.g. with `c()` and `.settleSameAsThenable_()`) actually correct?**
   _`A()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `semi`, `singleQuote`, `trailingComma` to the rest of the system?**
-  _215 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _217 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Dev Tooling & Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Docs & Design-System Spec` be split into smaller, more focused modules?**

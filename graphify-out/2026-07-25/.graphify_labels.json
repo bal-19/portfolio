@@ -65,5 +65,6 @@
   "63": "emscripten_realloc_buffer",
   "64": "intArrayFromString",
   "65": "wrapPointer",
-  "66": "scrollProgress.ts"
+  "66": "scrollProgress.ts",
+  "67": "ha"
 }
