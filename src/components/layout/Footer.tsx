@@ -130,7 +130,7 @@ export function Footer() {
             <div className="mt-8 border-t-2 border-ore-border pt-5 font-mono text-xs text-ore-text-muted">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="font-display text-base font-bold text-ore-text-bright">
-                        nama<span className="text-green-bright">.</span>dev
+                        baal<span className="text-green-bright">.</span>dev
                     </span>
                     <span>{t.footer.note}</span>
                 </div>
