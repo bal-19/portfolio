@@ -19,36 +19,19 @@ export interface JobMeta {
 // its own `id`/`en` copy, so both languages stay together in one place.
 export const experience: JobMeta[] = [
   {
-    dot: 'green',
+    dot: 'gold',
     content: {
       id: {
-        year: '2023 — Kini',
-        role: 'Peran Senior',
-        org: 'Perusahaan A',
-        note: 'Deskripsi singkat tanggung jawab dan pencapaian utamamu di peran ini.',
+        year: '2026 — Kini',
+        role: 'Freelance Fullstack Developer',
+        org: 'Self-employed',
+        note: 'Membangun aplikasi web modern untuk berbagai klien menggunakan React, Express, PostgreSQL, Docker, dan teknologi AI. Berfokus pada arsitektur yang scalable, maintainable, serta pengalaman pengguna yang baik.',
       },
       en: {
-        year: '2023 — Now',
-        role: 'Senior Role',
-        org: 'Company A',
-        note: 'A short description of your responsibilities and key achievements in this role.',
-      },
-    },
-  },
-  {
-    dot: 'blue',
-    content: {
-      id: {
-        year: '2020 — 2023',
-        role: 'Peran Menengah',
-        org: 'Perusahaan B',
-        note: 'Deskripsi singkat tanggung jawab dan pencapaian utamamu di peran ini.',
-      },
-      en: {
-        year: '2020 — 2023',
-        role: 'Mid-level Role',
-        org: 'Company B',
-        note: 'A short description of your responsibilities and key achievements in this role.',
+        year: '2026 — Present',
+        role: 'Freelance Fullstack Developer',
+        org: 'Self-employed',
+        note: 'Building modern web applications for clients using React, Express, PostgreSQL, Docker, and AI technologies. Focused on scalable architecture, maintainable code, and great user experiences.',
       },
     },
   },
@@ -56,16 +39,33 @@ export const experience: JobMeta[] = [
     dot: 'gold',
     content: {
       id: {
-        year: '2018 — 2020',
-        role: 'Peran Awal',
-        org: 'Freelance',
-        note: 'Deskripsi singkat tanggung jawab dan pencapaian utamamu di peran ini.',
+        year: '2025 — Kini',
+        role: 'Fullstack Developer',
+        org: 'CV Godzillab Indonesia',
+        note: 'Membangun aplikasi web modern untuk berbagai klien menggunakan React, Express, PostgreSQL, Docker, dan teknologi AI. Berfokus pada arsitektur yang scalable, maintainable, serta pengalaman pengguna yang baik.',
       },
       en: {
-        year: '2018 — 2020',
-        role: 'Early Role',
-        org: 'Freelance',
-        note: 'A short description of your responsibilities and key achievements in this role.',
+        year: '2025 — Present',
+        role: 'Fullstack Developer',
+        org: 'CV Godzillab Indonesia',
+        note: 'Building modern web applications for clients using React, Express, PostgreSQL, Docker, and AI technologies. Focused on scalable architecture, maintainable code, and great user experiences.',
+      },
+    },
+  },
+  {
+    dot: 'blue',
+    content: {
+      id: {
+        year: '2023 — 2024',
+        role: 'Data Crawler Intern',
+        org: 'PT Indonesia Indicator',
+        note: 'Mengembangkan sistem web scraping dan data crawling menggunakan Python. Berkontribusi dalam membangun scraper yang scalable untuk mengumpulkan dan memproses data dari berbagai sumber.',
+      },
+      en: {
+        year: '2023 — 2024',
+        role: 'Data Crawler Intern',
+        org: 'PT Indonesia Indicator',
+        note: 'Developed scalable web scraping and data crawling systems using Python. Contributed to building scraping pipelines for collecting and processing data from multiple sources.',
       },
     },
   },
