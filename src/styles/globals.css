@@ -63,6 +63,21 @@
   --ore-tooltip-bg: rgba(18, 8, 24, 0.96);
   --ore-tooltip-border: #4a2c8f;
 
+  /* ── Contribution blocks (light = top/left bevel, dark = bottom/right) ──
+     Level 0 reuses --ore-surface / --ore-border-dim as an empty slot. */
+  --block-iron: #d8d8d8;
+  --block-iron-light: #f2f2f2;
+  --block-iron-dark: #9a9a9a;
+  --block-gold: #f9e245;
+  --block-gold-light: #fff5a8;
+  --block-gold-dark: #c4a81e;
+  --block-diamond: #64e8e0;
+  --block-diamond-light: #adf6f1;
+  --block-diamond-dark: #2fa9a3;
+  --block-emerald: #17c964;
+  --block-emerald-light: #56e895;
+  --block-emerald-dark: #0e8b45;
+
   /* ── Semantic link aliases ── */
   --link: var(--ore-blue-bright);
   --link-hover: var(--ore-blue);

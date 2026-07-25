@@ -59,6 +59,25 @@ export interface PathDict {
   title: string
 }
 
+export interface GithubWeekdayDict {
+  mon: string
+  wed: string
+  fri: string
+}
+
+export interface GithubDict {
+  kicker: string
+  title: string
+  panelLabel: string
+  totalSuffix: string
+  contribution: string
+  contributions: string
+  none: string
+  legendLabel: string
+  months: string[]
+  weekdays: GithubWeekdayDict
+}
+
 export interface ContactDict {
   kicker: string
   title: string
@@ -77,6 +96,7 @@ export interface Dictionary {
   stack: StackDict
   work: WorkDict
   path: PathDict
+  github: GithubDict
   contact: ContactDict
   footer: FooterDict
 }

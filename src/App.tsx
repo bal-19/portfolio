@@ -11,6 +11,7 @@ import { About } from '@/sections/About'
 import { TechStack } from '@/sections/TechStack'
 import { Projects } from '@/sections/Projects'
 import { Experience } from '@/sections/Experience'
+import { GithubActivity } from '@/sections/GithubActivity'
 import { Contact } from '@/sections/Contact'
 
 export function App() {
@@ -32,6 +33,8 @@ export function App() {
           <Projects />
           <PixelDivider />
           <Experience />
+          <PixelDivider />
+          <GithubActivity />
           <PixelDivider />
           <Contact />
         </main>
