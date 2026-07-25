@@ -1,4 +1,9 @@
-import type { BlockLevel, ContributionDay } from '@/data/contributions'
+import { BLOCK_LEVELS } from '@/data/contributions'
+import type {
+  BlockLevel,
+  ContributionDay,
+  RawContributionDay,
+} from '@/data/contributions'
 
 /** A grid column. `null` slots pad the first/last partial week. */
 export type ContributionWeek = (ContributionDay | null)[]
@@ -10,42 +15,22 @@ export interface MonthLabel {
   month: number
 }
 
-/** Quartile cut-offs [q1, q2, q3] of the non-zero days. */
-export type ContributionScale = [number, number, number]
-
-/** Nearest-rank percentile over an ascending list. */
-function percentile(sorted: number[], p: number): number {
-  const index = Math.ceil(p * sorted.length) - 1
-  return sorted[Math.min(Math.max(index, 0), sorted.length - 1)]
+/** Clamps an out-of-range or fractional level onto the 0-4 ladder. */
+export function toBlockLevel(value: number): BlockLevel {
+  return BLOCK_LEVELS[Math.min(Math.max(Math.round(value), 0), 4)]
 }
 
-/**
- * Quartiles of the days that actually have activity, the way GitHub's own
- * calendar does it. Taking fractions of the busiest day instead would let a
- * single heavy day drag every threshold up and flatten the whole year into
- * the lowest tier.
- */
-export function buildScale(days: ContributionDay[]): ContributionScale {
-  const active = days
-    .map((day) => day.count)
-    .filter((count) => count > 0)
-    .sort((a, b) => a - b)
-
-  if (active.length === 0) return [0, 0, 0]
-  return [
-    percentile(active, 0.25),
-    percentile(active, 0.5),
-    percentile(active, 0.75),
-  ]
+/** Narrows the raw JSON rows so `level` is a real BlockLevel. */
+export function normalizeDays(raw: RawContributionDay[]): ContributionDay[] {
+  return raw.map((day) => ({
+    date: day.date,
+    count: day.count,
+    level: toBlockLevel(day.level),
+  }))
 }
 
-export function levelFor(count: number, scale: ContributionScale): BlockLevel {
-  if (count <= 0) return 0
-  const [q1, q2, q3] = scale
-  if (count <= q1) return 1
-  if (count <= q2) return 2
-  if (count <= q3) return 3
-  return 4
+export function totalCount(days: ContributionDay[]): number {
+  return days.reduce((sum, day) => sum + day.count, 0)
 }
 
 function weekdayOf(date: string): number {

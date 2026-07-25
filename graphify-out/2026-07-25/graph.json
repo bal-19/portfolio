@@ -39,19 +39,6 @@
         "confidence": "EXTRACTED",
         "confidence_score": 1.0,
         "source_file": "docs/design-system.md"
-      },
-      {
-        "id": "project_documentation_set",
-        "label": "Project Documentation Set",
-        "nodes": [
-          "claude_portfolio_instructions",
-          "readme_portfolio_overview",
-          "docs_design_system_oreframe"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "CLAUDE.md"
       }
     ]
   },
@@ -1237,7 +1224,7 @@
       "label": "WEEKDAY_ROWS",
       "file_type": "code",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L22",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_ui_contributiongraph_weekday_rows",
       "community": 52,
@@ -1248,7 +1235,7 @@
       "label": "blockStyle()",
       "file_type": "code",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L28",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_ui_contributiongraph_blockstyle",
       "community": 52,
@@ -1259,7 +1246,7 @@
       "label": "formatDate()",
       "file_type": "code",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L49",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "src_components_ui_contributiongraph_formatdate",
       "community": 52,
@@ -1270,7 +1257,7 @@
       "label": "HoverState",
       "file_type": "code",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L54",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_ui_contributiongraph_hoverstate",
       "community": 52,
@@ -1281,7 +1268,7 @@
       "label": "ContributionGraphProps",
       "file_type": "code",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L62",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "src_components_ui_contributiongraph_contributiongraphprops",
       "community": 52,
@@ -1292,7 +1279,7 @@
       "label": "ContributionGraph()",
       "file_type": "code",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L67",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "src_components_ui_contributiongraph_contributiongraph",
       "community": 52,
@@ -2466,21 +2453,43 @@
       "norm_label": "monthlabel"
     },
     {
-      "label": "maxCount()",
+      "label": "ContributionScale",
       "file_type": "code",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
-      "id": "src_lib_contributions_maxcount",
+      "id": "src_lib_contributions_contributionscale",
       "community": 51,
       "community_name": "contributions.ts",
-      "norm_label": "maxcount()"
+      "norm_label": "contributionscale"
+    },
+    {
+      "label": "percentile()",
+      "file_type": "code",
+      "source_file": "src/lib/contributions.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_lib_contributions_percentile",
+      "community": 51,
+      "community_name": "contributions.ts",
+      "norm_label": "percentile()"
+    },
+    {
+      "label": "buildScale()",
+      "file_type": "code",
+      "source_file": "src/lib/contributions.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_lib_contributions_buildscale",
+      "community": 51,
+      "community_name": "contributions.ts",
+      "norm_label": "buildscale()"
     },
     {
       "label": "levelFor()",
       "file_type": "code",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L21",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "src_lib_contributions_levelfor",
       "community": 51,
@@ -2491,7 +2500,7 @@
       "label": "weekdayOf()",
       "file_type": "code",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L30",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "src_lib_contributions_weekdayof",
       "community": 51,
@@ -2502,7 +2511,7 @@
       "label": "buildWeeks()",
       "file_type": "code",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L35",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "src_lib_contributions_buildweeks",
       "community": 51,
@@ -2513,7 +2522,7 @@
       "label": "monthLabels()",
       "file_type": "code",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L58",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "src_lib_contributions_monthlabels",
       "community": 51,
@@ -3565,8 +3574,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "claude.md \u2014 developer portfolio instructions",
-      "id": "claude_portfolio_instructions",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "claude_portfolio_instructions"
     },
     {
       "label": "Project Folder Structure Convention",
@@ -3579,8 +3588,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "project folder structure convention",
-      "id": "claude_folder_structure",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "claude_folder_structure"
     },
     {
       "label": "Code Conventions (naming, exports, props, path alias)",
@@ -3593,8 +3602,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "code conventions (naming, exports, props, path alias)",
-      "id": "claude_code_conventions",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "claude_code_conventions"
     },
     {
       "label": "Do / Don't Rules",
@@ -3607,8 +3616,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "do / don't rules",
-      "id": "claude_do_donts",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "claude_do_donts"
     },
     {
       "label": "README \u2014 Portfolio Overview",
@@ -3621,8 +3630,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "readme \u2014 portfolio overview",
-      "id": "readme_portfolio_overview",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "readme_portfolio_overview"
     },
     {
       "label": "Bevel Motif (raised surface / concave well)",
@@ -3636,8 +3645,8 @@
       "rationale": "Bevel = raised surfaces (button, chip) get inset top-edge highlight + hard-edge colored drop bevel that collapses on press; concave wells (interior panels, inventory slots) invert this with dark inner shadow \u2014 creates game-HUD tactility without blur.",
       "community": 50,
       "norm_label": "bevel motif (raised surface / concave well)",
-      "id": "docs_design_system_bevel_motif",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_bevel_motif"
     },
     {
       "label": "Color Token System (ore-black/bg/surface + 4 accents)",
@@ -3650,8 +3659,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "color token system (ore-black/bg/surface + 4 accents)",
-      "id": "docs_design_system_color_tokens",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_color_tokens"
     },
     {
       "label": "Typography Scale (Space Grotesk / Manrope / JetBrains Mono)",
@@ -3665,8 +3674,8 @@
       "rationale": "Original Minecraft pixel font substituted with readable webfonts for legibility while keeping game-UI character.",
       "community": 1,
       "norm_label": "typography scale (space grotesk / manrope / jetbrains mono)",
-      "id": "docs_design_system_typography",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_typography"
     },
     {
       "label": "Spacing / Radius / Bento Grid System",
@@ -3680,8 +3689,8 @@
       "rationale": "8px base grid; bento variation lives in cell span rather than gap so sections don't look like a uniform grid.",
       "community": 1,
       "norm_label": "spacing / radius / bento grid system",
-      "id": "docs_design_system_bento_grid",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_bento_grid"
     },
     {
       "label": "Effects: Bevel / Shadow / Glow Tokens",
@@ -3694,8 +3703,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "effects: bevel / shadow / glow tokens",
-      "id": "docs_design_system_effects",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_effects"
     },
     {
       "label": "Button Component",
@@ -3708,8 +3717,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "button component",
-      "id": "docs_design_system_button_component",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_button_component"
     },
     {
       "label": "Badge Component",
@@ -3722,8 +3731,8 @@
       "contributor": null,
       "community": 38,
       "norm_label": "badge component",
-      "id": "docs_design_system_badge_component",
-      "community_name": "Design Docs: Badge"
+      "community_name": "Design Docs: Badge",
+      "id": "docs_design_system_badge_component"
     },
     {
       "label": "Panel Component",
@@ -3736,8 +3745,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "panel component",
-      "id": "docs_design_system_panel_component",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_panel_component"
     },
     {
       "label": "StatCell Component",
@@ -3750,8 +3759,8 @@
       "contributor": null,
       "community": 28,
       "norm_label": "statcell component",
-      "id": "docs_design_system_statcell_component",
-      "community_name": "Design Docs: HUD Hearts/StatCell"
+      "community_name": "Design Docs: HUD Hearts/StatCell",
+      "id": "docs_design_system_statcell_component"
     },
     {
       "label": "InventorySlot Component",
@@ -3764,8 +3773,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "inventoryslot component",
-      "id": "docs_design_system_inventoryslot_component",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_inventoryslot_component"
     },
     {
       "label": "SectionHeader Component",
@@ -3778,8 +3787,8 @@
       "contributor": null,
       "community": 42,
       "norm_label": "sectionheader component",
-      "id": "docs_design_system_sectionheader_component",
-      "community_name": "Design Docs: SectionHeader"
+      "community_name": "Design Docs: SectionHeader",
+      "id": "docs_design_system_sectionheader_component"
     },
     {
       "label": "Icon Component (HUD glyph set)",
@@ -3792,8 +3801,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "icon component (hud glyph set)",
-      "id": "docs_design_system_icon_component",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_icon_component"
     },
     {
       "label": "Reveal Component (Framer Motion scroll-reveal wrapper)",
@@ -3806,8 +3815,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "reveal component (framer motion scroll-reveal wrapper)",
-      "id": "docs_design_system_reveal_component",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_reveal_component"
     },
     {
       "label": "Header Layout (nav + lang toggle + Contact button)",
@@ -3820,8 +3829,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "header layout (nav + lang toggle + contact button)",
-      "id": "docs_design_system_header_layout",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_header_layout"
     },
     {
       "label": "Footer Layout (contact panel + social + footer bar)",
@@ -3834,8 +3843,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "footer layout (contact panel + social + footer bar)",
-      "id": "docs_design_system_footer_layout",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_footer_layout"
     },
     {
       "label": "HudBackdrop Layout (radial glow + dot grid)",
@@ -3848,8 +3857,8 @@
       "contributor": null,
       "community": 40,
       "norm_label": "hudbackdrop layout (radial glow + dot grid)",
-      "id": "docs_design_system_hudbackdrop_layout",
-      "community_name": "Design Docs: HudBackdrop"
+      "community_name": "Design Docs: HudBackdrop",
+      "id": "docs_design_system_hudbackdrop_layout"
     },
     {
       "label": "XP Scroll Bar Flourish",
@@ -3862,8 +3871,8 @@
       "contributor": null,
       "community": 44,
       "norm_label": "xp scroll bar flourish",
-      "id": "docs_design_system_xpscrollbar",
-      "community_name": "Design Docs: XpScrollBar"
+      "community_name": "Design Docs: XpScrollBar",
+      "id": "docs_design_system_xpscrollbar"
     },
     {
       "label": "Splash Text Flourish",
@@ -3876,8 +3885,8 @@
       "contributor": null,
       "community": 43,
       "norm_label": "splash text flourish",
-      "id": "docs_design_system_splash_text",
-      "community_name": "Design Docs: Splash Text"
+      "community_name": "Design Docs: Splash Text",
+      "id": "docs_design_system_splash_text"
     },
     {
       "label": "Item Tooltip Flourish",
@@ -3890,8 +3899,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "item tooltip flourish",
-      "id": "docs_design_system_item_tooltip",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_item_tooltip"
     },
     {
       "label": "Enchant Glint Flourish",
@@ -3904,8 +3913,8 @@
       "contributor": null,
       "community": 50,
       "norm_label": "enchant glint flourish",
-      "id": "docs_design_system_enchant_glint",
-      "community_name": "Project Folder Structure Convention"
+      "community_name": "Project Folder Structure Convention",
+      "id": "docs_design_system_enchant_glint"
     },
     {
       "label": "World Strata Layout Flourish",
@@ -3918,8 +3927,8 @@
       "contributor": null,
       "community": 29,
       "norm_label": "world strata layout flourish",
-      "id": "docs_design_system_world_strata",
-      "community_name": "Design Docs: PixelDivider/WorldStrata"
+      "community_name": "Design Docs: PixelDivider/WorldStrata",
+      "id": "docs_design_system_world_strata"
     },
     {
       "label": "PixelDivider Flourish",
@@ -3932,8 +3941,8 @@
       "contributor": null,
       "community": 29,
       "norm_label": "pixeldivider flourish",
-      "id": "docs_design_system_pixeldivider",
-      "community_name": "Design Docs: PixelDivider/WorldStrata"
+      "community_name": "Design Docs: PixelDivider/WorldStrata",
+      "id": "docs_design_system_pixeldivider"
     },
     {
       "label": "Pixel Mobs & Particles Flourish",
@@ -3946,8 +3955,8 @@
       "contributor": null,
       "community": 41,
       "norm_label": "pixel mobs & particles flourish",
-      "id": "docs_design_system_pixel_mobs",
-      "community_name": "Design Docs: Pixel Mobs"
+      "community_name": "Design Docs: Pixel Mobs",
+      "id": "docs_design_system_pixel_mobs"
     },
     {
       "label": "HUD Hearts Flourish",
@@ -3960,8 +3969,8 @@
       "contributor": null,
       "community": 28,
       "norm_label": "hud hearts flourish",
-      "id": "docs_design_system_hud_hearts",
-      "community_name": "Design Docs: HUD Hearts/StatCell"
+      "community_name": "Design Docs: HUD Hearts/StatCell",
+      "id": "docs_design_system_hud_hearts"
     },
     {
       "label": "Chrome Game Flourish (selection/focus/scrollbar/vignette)",
@@ -3974,8 +3983,8 @@
       "contributor": null,
       "community": 39,
       "norm_label": "chrome game flourish (selection/focus/scrollbar/vignette)",
-      "id": "docs_design_system_chrome_game",
-      "community_name": "Design Docs: Chrome/Game Feel"
+      "community_name": "Design Docs: Chrome/Game Feel",
+      "id": "docs_design_system_chrome_game"
     },
     {
       "label": "Iconography (no logo, Simple Icons CDN, HUD glyphs)",
@@ -3988,8 +3997,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "iconography (no logo, simple icons cdn, hud glyphs)",
-      "id": "docs_design_system_iconography",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_iconography"
     },
     {
       "label": "Content & i18n Structure",
@@ -4002,8 +4011,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "content & i18n structure",
-      "id": "docs_design_system_i18n_content",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "docs_design_system_i18n_content"
     },
     {
       "label": "index.html \u2014 App Shell",
@@ -4016,8 +4025,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "index.html \u2014 app shell",
-      "id": "index_html_document",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "index_html_document"
     },
     {
       "label": "favicon.svg \u2014 Rounded-square icon with blue zigzag glyph",
@@ -4030,8 +4039,8 @@
       "contributor": null,
       "community": 1,
       "norm_label": "favicon.svg \u2014 rounded-square icon with blue zigzag glyph",
-      "id": "public_favicon_icon",
-      "community_name": "Docs & Design-System Spec"
+      "community_name": "Docs & Design-System Spec",
+      "id": "public_favicon_icon"
     }
   ],
   "links": [
@@ -5098,7 +5107,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L28",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph",
@@ -5109,7 +5118,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L67",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph",
@@ -5120,7 +5129,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L62",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph",
@@ -5131,7 +5140,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L49",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph",
@@ -5142,7 +5151,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L54",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph",
@@ -5153,7 +5162,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L22",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph",
@@ -5165,7 +5174,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L223",
+      "source_location": "L258",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph_contributiongraph",
@@ -5177,7 +5186,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/ContributionGraph.tsx",
-      "source_location": "L77",
+      "source_location": "L111",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_contributiongraph_contributiongraph",
@@ -6306,11 +6315,33 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L35",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_contributions",
+      "target": "src_lib_contributions_buildscale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/contributions.ts",
+      "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_contributions",
       "target": "src_lib_contributions_buildweeks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/contributions.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_contributions",
+      "target": "src_lib_contributions_contributionscale",
       "confidence_score": 1.0
     },
     {
@@ -6328,22 +6359,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L21",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_contributions",
       "target": "src_lib_contributions_levelfor",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/lib/contributions.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_lib_contributions",
-      "target": "src_lib_contributions_maxcount",
       "confidence_score": 1.0
     },
     {
@@ -6361,7 +6381,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L58",
+      "source_location": "L79",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_contributions",
@@ -6372,7 +6392,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L30",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_contributions",
+      "target": "src_lib_contributions_percentile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/contributions.ts",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_contributions",
@@ -6384,7 +6415,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/lib/contributions.ts",
-      "source_location": "L40",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_lib_contributions_buildscale",
+      "target": "src_lib_contributions_percentile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/contributions.ts",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_lib_contributions_buildweeks",
@@ -7240,6 +7283,36 @@
       "target": "docs_design_system_design_system_oreframe_developer_portfolio"
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/design-system.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
+      "target": "docs_design_system_bento_grid"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/design-system.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
+      "target": "docs_design_system_bevel_motif"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/design-system.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
+      "target": "docs_design_system_color_tokens"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/design-system.md",
@@ -7328,6 +7401,16 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/design-system.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
+      "target": "docs_design_system_typography"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/design-system.md",
@@ -7337,46 +7420,6 @@
       "source": "docs_design_system_design_system_oreframe_developer_portfolio",
       "target": "docs_design_system_warna",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/design-system.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
-      "target": "docs_design_system_bento_grid"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/design-system.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
-      "target": "docs_design_system_bevel_motif"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/design-system.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
-      "target": "docs_design_system_color_tokens"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/design-system.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_design_system_design_system_oreframe_developer_portfolio",
-      "target": "docs_design_system_typography"
     },
     {
       "relation": "references",
@@ -7636,19 +7679,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/design-system.md"
-    },
-    {
-      "id": "project_documentation_set",
-      "label": "Project Documentation Set",
-      "nodes": [
-        "claude_portfolio_instructions",
-        "readme_portfolio_overview",
-        "docs_design_system_oreframe"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDE.md"
     }
   ],
   "built_at_commit": "a71caa51426470cd3a3a3f1aec9ffe9b66339140"

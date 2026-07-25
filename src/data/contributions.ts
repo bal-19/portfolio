@@ -3,15 +3,20 @@ export type BlockLevel = 0 | 1 | 2 | 3 | 4
 export interface ContributionDay {
   date: string
   count: number
+  level: BlockLevel
 }
 
-// Shape of src/data/stats.json, written by the CI build script from the
-// GitHub GraphQL contributionsCollection query.
-export interface ContributionStats {
-  username: string
-  generatedAt: string
-  totalContributions: number
-  days: ContributionDay[]
+/**
+ * Shape of src/data/stats.json as written by the CI build script: one entry
+ * per day, ascending. `level` mirrors GitHub's own contributionLevel enum
+ * (NONE → FOURTH_QUARTILE) as 0-4, so the tier ladder matches the real
+ * calendar instead of being re-derived here. Typed loosely because a JSON
+ * import widens the literal to `number`.
+ */
+export interface RawContributionDay {
+  date: string
+  count: number
+  level: number
 }
 
 export interface BlockTier {

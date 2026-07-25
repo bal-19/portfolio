@@ -3,11 +3,13 @@ import { Panel } from '@/components/ui/Panel'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Reveal } from '@/components/ui/Reveal'
 import { ContributionGraph } from '@/components/ui/ContributionGraph'
-import type { ContributionStats } from '@/data/contributions'
+import { normalizeDays, totalCount } from '@/lib/contributions'
 import statsData from '@/data/stats.json'
 
-// Written by the CI build script from the GitHub GraphQL API.
-const stats = statsData as ContributionStats
+// Written by the CI build script from the GitHub GraphQL API. Normalized once
+// at module scope since the JSON is static.
+const days = normalizeDays(statsData)
+const total = totalCount(days)
 
 export function GithubActivity() {
   const { t } = useLang()
@@ -29,10 +31,7 @@ export function GithubActivity() {
           accent="green"
           bodyStyle={{ padding: 24 }}
         >
-          <ContributionGraph
-            days={stats.days}
-            total={stats.totalContributions}
-          />
+          <ContributionGraph days={days} total={total} />
         </Panel>
       </Reveal>
     </section>

@@ -1,16 +1,16 @@
 # Graph Report - new-portfolio  (2026-07-25)
 
 ## Corpus Check
-- 55 files · ~14,001 words
+- 56 files · ~14,938 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 354 nodes · 325 edges · 55 communities (35 shown, 20 thin omitted)
+- 362 nodes · 332 edges · 56 communities (36 shown, 20 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 6 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a71caa51`
+- Built from commit: `e21c5bd8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,6 +57,7 @@
 - ContributionGraph.tsx
 - contributions.ts
 - GithubActivity.tsx
+- fetch-github-stats.mjs
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 20 edges
@@ -89,7 +90,7 @@
 - **Game Flourishes Feature Set** — docs_design_system_xpscrollbar, docs_design_system_splash_text, docs_design_system_item_tooltip, docs_design_system_enchant_glint, docs_design_system_world_strata, docs_design_system_pixeldivider, docs_design_system_pixel_mobs, docs_design_system_hud_hearts, docs_design_system_chrome_game [EXTRACTED 1.00]
 - **src/components/ui Component Library** — docs_design_system_button_component, docs_design_system_badge_component, docs_design_system_panel_component, docs_design_system_statcell_component, docs_design_system_inventoryslot_component, docs_design_system_sectionheader_component, docs_design_system_icon_component, docs_design_system_reveal_component [EXTRACTED 1.00]
 
-## Communities (55 total, 20 thin omitted)
+## Communities (56 total, 20 thin omitted)
 
 ### Community 0 - "Dev Tooling & Dependencies"
 Cohesion: 0.05
@@ -168,8 +169,8 @@ Cohesion: 0.20
 Nodes (10): Code Conventions (naming, exports, props, path alias), Project Folder Structure Convention, Bevel Motif (raised surface / concave well), Button Component, Effects: Bevel / Shadow / Glow Tokens, Enchant Glint Flourish, Footer Layout (contact panel + social + footer bar), Header Layout (nav + lang toggle + Contact button) (+2 more)
 
 ### Community 51 - "contributions.ts"
-Cohesion: 0.24
-Nodes (7): buildScale(), buildWeeks(), ContributionScale, ContributionWeek, MonthLabel, percentile(), weekdayOf()
+Cohesion: 0.28
+Nodes (6): buildWeeks(), ContributionWeek, MonthLabel, normalizeDays(), toBlockLevel(), weekdayOf()
 
 ### Community 52 - "ContributionGraph.tsx"
 Cohesion: 0.38
@@ -177,10 +178,14 @@ Nodes (6): blockStyle(), ContributionGraph(), ContributionGraphProps, formatDate
 
 ### Community 53 - "contributions.ts"
 Cohesion: 0.29
-Nodes (6): BLOCK_LEVELS, BLOCK_TIERS, BlockLevel, BlockTier, ContributionDay, ContributionStats
+Nodes (6): BLOCK_LEVELS, BLOCK_TIERS, BlockLevel, BlockTier, ContributionDay, RawContributionDay
+
+### Community 55 - "fetch-github-stats.mjs"
+Cohesion: 0.25
+Nodes (5): counts, days, [q1, q2, q3], result, sorted
 
 ## Knowledge Gaps
-- **198 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+193 more)
+- **203 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+198 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -188,11 +193,11 @@ Nodes (6): BLOCK_LEVELS, BLOCK_TIERS, BlockLevel, BlockTier, ContributionDay, Co
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `Dev Tooling & Dependencies` to `Runtime Deps & Package Meta`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `Design System — "Oreframe" Developer Portfolio` connect `Docs & Design-System Spec` to `Project Folder Structure Convention`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **What connects `semi`, `singleQuote`, `trailingComma` to the rest of the system?**
-  _198 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _203 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Dev Tooling & Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Docs & Design-System Spec` be split into smaller, more focused modules?**

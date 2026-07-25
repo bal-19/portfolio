@@ -7,12 +7,7 @@ import type {
   BlockTier,
   ContributionDay,
 } from '@/data/contributions'
-import {
-  buildScale,
-  buildWeeks,
-  levelFor,
-  monthLabels,
-} from '@/lib/contributions'
+import { buildWeeks, monthLabels } from '@/lib/contributions'
 
 const GAP = 3
 const MONTH_ROW = 16
@@ -74,7 +69,6 @@ export function ContributionGraph({ days, total }: ContributionGraphProps) {
   const [hover, setHover] = useState<HoverState | null>(null)
 
   const weeks = useMemo(() => buildWeeks(days), [days])
-  const scale = useMemo(() => buildScale(days), [days])
   const months = useMemo(() => monthLabels(weeks), [weeks])
 
   // Grow the blocks so the year fills the panel instead of stopping short of
@@ -243,8 +237,7 @@ export function ContributionGraph({ days, total }: ContributionGraphProps) {
                     )
                   }
 
-                  const level = levelFor(day.count, scale)
-                  const { when, amount, tier } = label(day, level)
+                  const { when, amount, tier } = label(day, day.level)
                   const active = hover?.day.date === day.date
 
                   return (
@@ -252,7 +245,9 @@ export function ContributionGraph({ days, total }: ContributionGraphProps) {
                       key={day.date}
                       role="gridcell"
                       aria-label={`${when} — ${amount} (${tier.name})`}
-                      onMouseEnter={(event) => handleEnter(event, day, level)}
+                      onMouseEnter={(event) =>
+                        handleEnter(event, day, day.level)
+                      }
                       onMouseLeave={() => setHover(null)}
                       style={{
                         ...blockStyle(tier, cell),
