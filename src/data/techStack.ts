@@ -34,7 +34,7 @@ export const techStack: TechItem[] = [
   { slug: 'redis', label: 'Redis', accent: 'green', tier: 'rare' },
   { slug: 'postgresql', label: 'Postgres', accent: 'blue', tier: 'epic' },
   { slug: 'docker', label: 'Docker', accent: 'blue', tier: 'rare' },
-  { slug: 'javascript', label: 'JavaScript', accent: 'green', tier: 'common' },
+  { slug: 'typescript', label: 'TypeScript', accent: 'green', tier: 'common' },
   { slug: 'git', label: 'Git', accent: 'blue', tier: 'common' },
   {
     slug: 'linux',
