@@ -46,39 +46,17 @@ export interface StackDict {
   tiers: TierDict
 }
 
-export interface FeaturedDict {
-  badge: string
-  tag: string
-  title: string
-  desc: string
-}
-
-export interface ProjectDict {
-  tag: string
-  title: string
-  desc: string
-}
-
 export interface WorkDict {
   kicker: string
   title: string
   linkLive: string
   linkCode: string
-  featured: FeaturedDict
-  projects: ProjectDict[]
-}
-
-export interface JobDict {
-  year: string
-  role: string
-  org: string
-  note: string
+  featuredBadge: string
 }
 
 export interface PathDict {
   kicker: string
   title: string
-  jobs: JobDict[]
 }
 
 export interface ContactDict {

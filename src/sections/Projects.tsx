@@ -9,8 +9,8 @@ import { featuredProject, projects } from '@/data/projects'
 const arrowUp = <span>↗</span>
 
 export function Projects() {
-  const { t } = useLang()
-  const f = t.work.featured
+  const { t, lang } = useLang()
+  const f = featuredProject.content[lang]
 
   return (
     <section id="work" className="mb-[72px]">
@@ -45,7 +45,7 @@ export function Projects() {
               solid
               style={{ alignSelf: 'flex-start', marginBottom: 16 }}
             >
-              {f.badge}
+              {t.work.featuredBadge}
             </Badge>
             <h3
               className="m-0 font-display font-bold text-ore-text-bright"
@@ -95,7 +95,7 @@ export function Projects() {
         </Reveal>
 
         {projects.map((p, i) => {
-          const copy = t.work.projects[i]
+          const copy = p.content[lang]
           return (
             <Reveal
               key={copy.title}

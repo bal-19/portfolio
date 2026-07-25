@@ -11,7 +11,7 @@ const DOT: Record<'green' | 'blue' | 'gold', string> = {
 }
 
 export function Experience() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
 
   return (
     <section id="path" className="mb-[72px]">
@@ -26,7 +26,7 @@ export function Experience() {
 
       <div className="grid gap-3">
         {experience.map((meta, i) => {
-          const job = t.path.jobs[i]
+          const job = meta.content[lang]
           const dot = DOT[meta.dot]
           return (
             <Reveal key={job.role} delay={i * 70}>

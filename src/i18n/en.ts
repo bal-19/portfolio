@@ -62,68 +62,11 @@ export const en: Dictionary = {
     title: "Things I've shipped",
     linkLive: 'Live',
     linkCode: 'Code',
-    featured: {
-      badge: '★ Featured',
-      tag: 'Featured Project',
-      title: 'Flagship Project',
-      desc: 'A description of your flagship project — the problem it solves, the scale it handles, and the key technical decisions behind it. Replace this with your real project.',
-    },
-    projects: [
-      {
-        tag: 'Category',
-        title: 'Project Two',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-      {
-        tag: 'Category',
-        title: 'Project Three',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-      {
-        tag: 'Category',
-        title: 'Project Four',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-      {
-        tag: 'Category',
-        title: 'Project Five',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-      {
-        tag: 'Category',
-        title: 'Project Six',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-      {
-        tag: 'Category',
-        title: 'Project Seven',
-        desc: 'A short summary of the project — what it does and its core technology.',
-      },
-    ],
+    featuredBadge: '★ Featured',
   },
   path: {
     kicker: 'Experience',
     title: 'The path so far',
-    jobs: [
-      {
-        year: '2023 — Now',
-        role: 'Senior Role',
-        org: 'Company A',
-        note: 'A short description of your responsibilities and key achievements in this role.',
-      },
-      {
-        year: '2020 — 2023',
-        role: 'Mid-level Role',
-        org: 'Company B',
-        note: 'A short description of your responsibilities and key achievements in this role.',
-      },
-      {
-        year: '2018 — 2020',
-        role: 'Early Role',
-        org: 'Freelance',
-        note: 'A short description of your responsibilities and key achievements in this role.',
-      },
-    ],
   },
   contact: {
     kicker: "▸ Let's build something",
