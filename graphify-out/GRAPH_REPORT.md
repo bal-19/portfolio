@@ -1,16 +1,16 @@
-# Graph Report - new-portfolio  (2026-07-25)
+# Graph Report - new-portfolio  (2026-09-29)
 
 ## Corpus Check
-- 60 files · ~29,383 words
+- 62 files · ~30,188 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 542 nodes · 639 edges · 68 communities (42 shown, 26 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.67)
+- 551 nodes · 647 edges · 69 communities (43 shown, 26 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.67)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f8d8a8a4`
+- Built from commit: `6639e310`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -72,6 +72,7 @@
 - wrapPointer
 - scrollProgress.ts
 - ha
+- AGENTS.md — Developer Portfolio (Vite + React)
 
 ## God Nodes (most connected - your core abstractions)
 1. `getCache()` - 21 edges
@@ -83,7 +84,7 @@
 7. `Design System — "Oreframe" Developer Portfolio` - 16 edges
 8. `compilerOptions` - 15 edges
 9. `q()` - 8 edges
-10. `CLAUDE.md — Developer Portfolio (Vite + React)` - 8 edges
+10. `AGENTS.md — Developer Portfolio (Vite + React)` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `favicon.svg — Rounded-square icon with blue zigzag glyph` --conceptually_related_to--> `Iconography (no logo, Simple Icons CDN, HUD glyphs)`  [INFERRED]
@@ -104,7 +105,7 @@
 - **Game Flourishes Feature Set** — docs_design_system_xpscrollbar, docs_design_system_splash_text, docs_design_system_item_tooltip, docs_design_system_enchant_glint, docs_design_system_world_strata, docs_design_system_pixeldivider, docs_design_system_pixel_mobs, docs_design_system_hud_hearts, docs_design_system_chrome_game [EXTRACTED 1.00]
 - **src/components/ui Component Library** — docs_design_system_button_component, docs_design_system_badge_component, docs_design_system_panel_component, docs_design_system_statcell_component, docs_design_system_inventoryslot_component, docs_design_system_sectionheader_component, docs_design_system_icon_component, docs_design_system_reveal_component [EXTRACTED 1.00]
 
-## Communities (68 total, 26 thin omitted)
+## Communities (69 total, 26 thin omitted)
 
 ### Community 0 - "Dev Tooling & Dependencies"
 Cohesion: 0.05
@@ -230,8 +231,12 @@ Nodes (4): ensureString(), intArrayFromString(), lengthBytesUTF8(), stringToUTF8
 Cohesion: 0.67
 Nodes (3): ha(), l(), p()
 
+### Community 68 - "AGENTS.md — Developer Portfolio (Vite + React)"
+Cohesion: 0.22
+Nodes (8): AGENTS.md — Developer Portfolio (Vite + React), Commands, Do, Don't, graphify, Konvensi Kode, Struktur Folder, Tech Stack
+
 ## Knowledge Gaps
-- **217 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+212 more)
+- **224 isolated node(s):** `semi`, `singleQuote`, `trailingComma`, `printWidth`, `prettier-plugin-tailwindcss` (+219 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -239,15 +244,15 @@ Nodes (3): ha(), l(), p()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `c()` connect `A` to `draco_decoder.js`, `Project Folder Structure Convention`, `ha`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `A()` connect `A` to `Project Folder Structure Convention`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Why does `q()` connect `Project Folder Structure Convention` to `A`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Are the 3 inferred relationships involving `A()` (e.g. with `c()` and `.settleSameAsThenable_()`) actually correct?**
   _`A()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `semi`, `singleQuote`, `trailingComma` to the rest of the system?**
-  _217 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _224 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Dev Tooling & Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
 - **Should `Docs & Design-System Spec` be split into smaller, more focused modules?**

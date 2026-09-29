@@ -245,9 +245,9 @@
     "semantic_hash": "9a5e362209e08679bac466cf052b5035"
   },
   "index.html": {
-    "mtime": 1784907940.1620867,
-    "ast_hash": "7d84d4ced856d0bc6e0a5a2e850374fa",
-    "semantic_hash": "7d84d4ced856d0bc6e0a5a2e850374fa"
+    "mtime": 1784972636.9044936,
+    "ast_hash": "c962292fa83fb57a972c1274a5ac9d5e",
+    "semantic_hash": ""
   },
   "public/favicon.svg": {
     "mtime": 1784972474.3747146,
@@ -270,8 +270,8 @@
     "semantic_hash": ""
   },
   "src/data/stats.json": {
-    "mtime": 1784963494.8408165,
-    "ast_hash": "c015cee011b252add636fc526040672e",
+    "mtime": 1790649435.4800627,
+    "ast_hash": "d1b42ab9072db99761e52fd24640aec0",
     "semantic_hash": ""
   },
   "src/lib/contributions.ts": {
@@ -327,6 +327,16 @@
   "public/models/the-end/textures/Fire_baseColor.webp": {
     "mtime": 1784958382.4365175,
     "ast_hash": "35b5239921b0773f00b9603a425a00f8",
+    "semantic_hash": ""
+  },
+  ".codex/hooks.json": {
+    "mtime": 1787198123.0417633,
+    "ast_hash": "11686ab9d8fbd2bd8da7d0e9961b4a8f",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1787198122.962471,
+    "ast_hash": "49e4bf51d85947ac2a946519df74f936",
     "semantic_hash": ""
   }
 }

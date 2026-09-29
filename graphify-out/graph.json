@@ -5379,6 +5379,105 @@
       "norm_label": "vite.config.ts"
     },
     {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_agents_md_developer_portfolio_vite_react",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "agents.md \u2014 developer portfolio (vite + react)"
+    },
+    {
+      "label": "Tech Stack",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "agents_tech_stack",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "tech stack"
+    },
+    {
+      "label": "Struktur Folder",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "agents_struktur_folder",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "struktur folder"
+    },
+    {
+      "label": "Konvensi Kode",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "agents_konvensi_kode",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "konvensi kode"
+    },
+    {
+      "label": "Do",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "agents_do",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "do"
+    },
+    {
+      "label": "Don't",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "agents_don_t",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "don't"
+    },
+    {
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "agents_commands",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "commands"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "agents_graphify",
+      "community": 68,
+      "community_name": "AGENTS.md \u2014 Developer Portfolio (Vite + React)",
+      "norm_label": "graphify"
+    },
+    {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "CLAUDE.md",
@@ -12757,6 +12856,94 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents",
+      "target": "agents_agents_md_developer_portfolio_vite_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agents_md_developer_portfolio_vite_react",
+      "target": "agents_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agents_md_developer_portfolio_vite_react",
+      "target": "agents_do",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agents_md_developer_portfolio_vite_react",
+      "target": "agents_don_t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agents_md_developer_portfolio_vite_react",
+      "target": "agents_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agents_md_developer_portfolio_vite_react",
+      "target": "agents_konvensi_kode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agents_md_developer_portfolio_vite_react",
+      "target": "agents_struktur_folder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "agents_agents_md_developer_portfolio_vite_react",
+      "target": "agents_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -13356,5 +13543,5 @@
       "source_file": "docs/design-system.md"
     }
   ],
-  "built_at_commit": "f8d8a8a45be59118e5e6db34315c0b499c9fabdb"
+  "built_at_commit": "6639e310d32475d28fd63a632a378264519a6387"
 }
