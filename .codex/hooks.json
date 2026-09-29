@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\laragon\\bin\\python\\python-3.13\\Scripts\\graphify.EXE hook-guard search"
+          }
+        ]
+      },
+      {
+        "matcher": "Read|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:\\laragon\\bin\\python\\python-3.13\\Scripts\\graphify.EXE hook-guard read"
+          }
+        ]
+      }
+    ]
+  }
+}
